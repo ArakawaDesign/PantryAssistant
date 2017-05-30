@@ -37,3 +37,1424 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 
 
 Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 69.47.251.101 at 2017-05-23 16:39:50 +0000
+  [1m[36m (11.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (7.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateRecipes (20170524025711)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170524025711"]]
+  [1m[35m (10.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20170524030034)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170524030034"]]
+  [1m[36m (10.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateComments (20170524030034)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "comments"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170524030034"]]
+  [1m[35m (8.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (13.8ms)[0m  [1mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (8.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (12.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170524025711')
+  [1m[36m (21.9ms)[0m  [1mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (13.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (11.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170524025711')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20170524030345)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_comments_on_recipe_id" ON "comments" ("recipe_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170524030345"]]
+  [1m[36m (13.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_recipe_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_recipe_id' AND type='index'
+[0m
+  [1m[36m (19.5ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (12.5ms)[0m  [1mCREATE  INDEX "index_comments_on_recipe_id" ON "comments" ("recipe_id")[0m
+  [1m[35m (13.7ms)[0m  CREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (12.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (14.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170524030345')
+  [1m[36m (7.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170524025711')[0m
+  [1m[35m (13.9ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (11.0ms)[0m  CREATE  INDEX "index_comments_on_recipe_id" ON "comments" ("recipe_id")
+  [1m[36m (12.8ms)[0m  [1mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (10.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (11.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (11.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170524030345')[0m
+  [1m[35m (10.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170524025711')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (13.2ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (10.1ms)[0m  [1mCREATE  INDEX "index_comments_on_recipe_id" ON "comments" ("recipe_id")[0m
+  [1m[35m (10.1ms)[0m  CREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (11.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (7.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170524030345')
+  [1m[36m (14.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170524025711')[0m
+  [1m[35m (7.8ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.6ms)[0m  CREATE  INDEX "index_comments_on_recipe_id" ON "comments" ("recipe_id")
+  [1m[36m (9.4ms)[0m  [1mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (7.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (6.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (8.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170524030345')[0m
+  [1m[35m (7.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170524025711')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "FreshChillies"], ["body", "1 quart"], ["created_at", "2017-05-24 03:19:25.153872"], ["updated_at", "2017-05-24 03:19:25.153872"]]
+  [1m[35m (9.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Oysters"], ["body", "1/2 gallon"], ["created_at", "2017-05-24 03:19:25.170087"], ["updated_at", "2017-05-24 03:19:25.170087"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Beef"], ["body", "2 gallon"], ["created_at", "2017-05-24 03:19:25.181305"], ["updated_at", "2017-05-24 03:19:25.181305"]]
+  [1m[35m (8.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Soba"], ["body", "2 cup"], ["created_at", "2017-05-24 03:19:25.192335"], ["updated_at", "2017-05-24 03:19:25.192335"]]
+  [1m[36m (7.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aubergine"], ["body", "3 quart"], ["created_at", "2017-05-24 03:19:25.202163"], ["updated_at", "2017-05-24 03:19:25.202163"]]
+  [1m[35m (8.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Mountain Bread"], ["body", "1/2 teaspoon"], ["created_at", "2017-05-24 03:19:25.212785"], ["updated_at", "2017-05-24 03:19:25.212785"]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Strawberries"], ["body", "1/3 quart"], ["created_at", "2017-05-24 03:19:25.223781"], ["updated_at", "2017-05-24 03:19:25.223781"]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Garam Masala"], ["body", "1/3 cup"], ["created_at", "2017-05-24 03:19:25.232177"], ["updated_at", "2017-05-24 03:19:25.232177"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Snowpea sprouts"], ["body", "3 gallon"], ["created_at", "2017-05-24 03:19:25.240078"], ["updated_at", "2017-05-24 03:19:25.240078"]]
+  [1m[35m (7.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Slivered Almonds"], ["body", "1/2 quart"], ["created_at", "2017-05-24 03:19:25.248955"], ["updated_at", "2017-05-24 03:19:25.248955"]]
+  [1m[36m (7.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Aliquid quis labore sit. Libero optio natus. Commodi tenetur soluta et cumque perspiciatis minima."], ["created_at", "2017-05-24 03:19:25.265789"], ["updated_at", "2017-05-24 03:19:25.265789"]]
+  [1m[35m (9.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Quam voluptatem dicta aspernatur et nemo sunt. Optio non ut assumenda esse quia architecto. Soluta perferendis unde."], ["created_at", "2017-05-24 03:19:25.277541"], ["updated_at", "2017-05-24 03:19:25.277541"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Voluptas quo accusamus hic omnis. Dolor odio sint harum temporibus et hic. Quo odio tempore assumenda et est sint qui. Dolor non voluptatem necessitatibus quo. Repudiandae saepe sed est."], ["created_at", "2017-05-24 03:19:25.287641"], ["updated_at", "2017-05-24 03:19:25.287641"]]
+  [1m[35m (7.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Harum natus hic incidunt quisquam esse consequatur. Corrupti sunt exercitationem. Necessitatibus cupiditate quisquam voluptas magnam non et omnis. Reprehenderit omnis temporibus voluptas recusandae."], ["created_at", "2017-05-24 03:19:25.298692"], ["updated_at", "2017-05-24 03:19:25.298692"]]
+  [1m[36m (15.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Natus suscipit accusantium illo mollitia. Nesciunt eum sed nihil repellat possimus est totam. Asperiores quasi sit ducimus. Nobis explicabo optio ad asperiores dolores quo."], ["created_at", "2017-05-24 03:19:25.317103"], ["updated_at", "2017-05-24 03:19:25.317103"]]
+  [1m[35m (9.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Distinctio et magnam culpa. Quo debitis architecto odio cum aut doloremque est. Nam ut cum odit delectus qui est."], ["created_at", "2017-05-24 03:19:25.328987"], ["updated_at", "2017-05-24 03:19:25.328987"]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Ipsa molestiae vitae. Debitis ut pariatur excepturi suscipit quisquam quia ut. Et quo rerum voluptas beatae aliquid est. Aperiam rerum voluptatem in ea doloremque ut."], ["created_at", "2017-05-24 03:19:25.342173"], ["updated_at", "2017-05-24 03:19:25.342173"]]
+  [1m[35m (8.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Praesentium dicta nemo eius similique cumque consequatur est. Labore facilis dolore cum qui harum voluptas. Nostrum ea odit inventore ipsam. Ea et voluptatem sit libero veniam voluptas accusantium. Consequuntur temporibus alias rerum qui blanditiis excepturi praesentium."], ["created_at", "2017-05-24 03:19:25.353528"], ["updated_at", "2017-05-24 03:19:25.353528"]]
+  [1m[36m (9.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Vel consequuntur officia alias ut. Eos eum pariatur nobis iste deleniti. Et iusto atque eius esse laborum. Et commodi aspernatur enim qui. Qui impedit dolor."], ["created_at", "2017-05-24 03:19:25.366300"], ["updated_at", "2017-05-24 03:19:25.366300"]]
+  [1m[35m (8.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Aut illo voluptatem cupiditate corporis sint sapiente. Voluptas repellat ipsam. Sed magnam omnis est possimus ipsa. Quas aut sunt ea qui eum cum."], ["created_at", "2017-05-24 03:19:25.377264"], ["updated_at", "2017-05-24 03:19:25.377264"]]
+  [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Qui rerum dolores sit sequi amet hic ut. Voluptatum suscipit dolores et. A sit ullam magnam."], ["created_at", "2017-05-24 03:19:25.389650"], ["updated_at", "2017-05-24 03:19:25.389650"]]
+  [1m[35m (9.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Ut ipsam temporibus. Fugit ratione quia odit excepturi pariatur. Qui aspernatur vitae eligendi architecto repellat modi. Soluta temporibus vero et. Et at iure veniam."], ["created_at", "2017-05-24 03:19:25.401741"], ["updated_at", "2017-05-24 03:19:25.401741"]]
+  [1m[36m (8.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Nulla laudantium ullam. Qui delectus sit voluptas eius reiciendis voluptatem. Dignissimos et expedita. Perferendis sit quam saepe."], ["created_at", "2017-05-24 03:19:25.413055"], ["updated_at", "2017-05-24 03:19:25.413055"]]
+  [1m[35m (8.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Ut voluptatem sit. Magnam et eos voluptatum autem. Quis voluptatem aut. Numquam quia aut aperiam tenetur modi."], ["created_at", "2017-05-24 03:19:25.424107"], ["updated_at", "2017-05-24 03:19:25.424107"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Nihil dolorem dolorem. Modi eaque praesentium et. Vero similique omnis. Mollitia rerum odio facere dicta qui rerum sed. Sint expedita nemo."], ["created_at", "2017-05-24 03:19:25.435700"], ["updated_at", "2017-05-24 03:19:25.435700"]]
+  [1m[35m (8.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "At repellendus reiciendis neque eveniet eos maiores et. Delectus sequi natus et ut tempora. Quos id dolores vel eveniet. Et dolore molestias sit quam. Dolores nihil sunt qui."], ["created_at", "2017-05-24 03:19:25.445845"], ["updated_at", "2017-05-24 03:19:25.445845"]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Eos deleniti sit. Porro inventore et cum repellat labore consequatur. Et quibusdam est."], ["created_at", "2017-05-24 03:19:25.456986"], ["updated_at", "2017-05-24 03:19:25.456986"]]
+  [1m[35m (9.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Necessitatibus est nulla quasi. Ex laborum autem ab voluptas temporibus voluptatum aut. A assumenda sequi odio qui et sint molestiae. Non asperiores enim nam deserunt doloremque molestias ullam. Consequatur nam qui."], ["created_at", "2017-05-24 03:19:25.469699"], ["updated_at", "2017-05-24 03:19:25.469699"]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Ea nulla a doloribus sunt accusantium facilis. Explicabo suscipit velit occaecati natus. Sed vitae mollitia vero repellendus architecto earum deserunt. Voluptatem non iure placeat minima quia maiores non. Eveniet placeat porro rerum."], ["created_at", "2017-05-24 03:19:25.481621"], ["updated_at", "2017-05-24 03:19:25.481621"]]
+  [1m[35m (8.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Sit voluptatem accusantium dolorem dolorem voluptates. Cumque labore quia tenetur praesentium est. Veritatis amet eius numquam."], ["created_at", "2017-05-24 03:19:25.492403"], ["updated_at", "2017-05-24 03:19:25.492403"]]
+  [1m[36m (7.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Aut nisi ut praesentium odit perferendis. Dolores eius vel molestias blanditiis. Distinctio velit sint rerum beatae dolor. Explicabo eveniet quas aut dolorem et tenetur."], ["created_at", "2017-05-24 03:19:25.501744"], ["updated_at", "2017-05-24 03:19:25.501744"]]
+  [1m[35m (11.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Aut qui ut vitae voluptatem. Error repellendus voluptate. Autem harum aut qui. Est doloremque dolorum veritatis et neque minima ratione. Quisquam vitae repudiandae dolorem ut vero sint."], ["created_at", "2017-05-24 03:19:25.515605"], ["updated_at", "2017-05-24 03:19:25.515605"]]
+  [1m[36m (9.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Enim sunt vel dolor voluptatem. Adipisci rerum aut non expedita repellat aut minima. Quibusdam consequatur maiores dolores quo ut rerum. Nostrum aliquam esse non odio."], ["created_at", "2017-05-24 03:19:25.527729"], ["updated_at", "2017-05-24 03:19:25.527729"]]
+  [1m[35m (6.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Ea ex recusandae et cupiditate ut eos. Recusandae necessitatibus similique. Vero molestiae hic nihil et minima incidunt."], ["created_at", "2017-05-24 03:19:25.536582"], ["updated_at", "2017-05-24 03:19:25.536582"]]
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Eos officiis veniam et placeat suscipit maxime. Aliquid fugit repellat omnis id expedita. Repellat recusandae eos dolor consequatur debitis veritatis distinctio."], ["created_at", "2017-05-24 03:19:25.545667"], ["updated_at", "2017-05-24 03:19:25.545667"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "recipes"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Scrambled Eggs"], ["body", "Eggs"], ["created_at", "2017-05-25 20:32:10.481763"], ["updated_at", "2017-05-25 20:32:10.481763"]]
+  [1m[36m (12.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  ORDER BY "recipes"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  ORDER BY "recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comments" ("body", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "First comment!"], ["recipe_id", 11], ["created_at", "2017-05-25 20:35:02.783870"], ["updated_at", "2017-05-25 20:35:02.783870"]]
+  [1m[35m (10.5ms)[0m  commit transaction
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."recipe_id" = ?[0m  [["recipe_id", 11]]
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:38:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 5002ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `welcome_index_path' for #<#<Class:0x000000050b5130>:0x000000050a3598>):
+    10: <body>
+    11:   <div class="container">
+    12:     <ul class="nav nav-tabs">
+    13:       <li><%= link_to "Home", welcome_index_path %></li>
+    14:       <li><%= link_to "About", welcome_about_path %></li>
+    15:     </ul>
+    16:   </div>
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__4328570040254996144_42093880'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.8ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:39:30 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-05-25 20:39:30 +0000
+
+
+Started GET "/assets/application.self-3d2b1085db6945c1ed2965f6b9561bfd4c3d4bfd17596a955c1ce8b4068f6b3f.css?body=1" for 69.47.251.101 at 2017-05-25 20:39:30 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-05-25 20:39:30 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 69.47.251.101 at 2017-05-25 20:39:30 +0000
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 69.47.251.101 at 2017-05-25 20:39:30 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 69.47.251.101 at 2017-05-25 20:39:30 +0000
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 69.47.251.101 at 2017-05-25 20:39:30 +0000
+
+
+Started GET "/assets/recipes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-05-25 20:39:30 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-05-25 20:39:30 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 69.47.251.101 at 2017-05-25 20:39:30 +0000
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:39:32 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.47.251.101 at 2017-05-25 20:39:33 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:39:33 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.47.251.101 at 2017-05-25 20:39:34 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:39:39 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:39:39 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:39:39 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.47.251.101 at 2017-05-25 20:39:39 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.47.251.101 at 2017-05-25 20:39:40 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.47.251.101 at 2017-05-25 20:39:40 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-25 20:39:57 +0000
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-25 20:42:10 +0000
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 41ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-25 20:42:41 +0000
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-25 20:43:49 +0000
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-25 20:43:50 +0000
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 28ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:44:14 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>All Recipes</h1>
+    2: <% @recipes.each do |recipe| %>
+    3:     <div class="media">
+    4:         <div class="media-body">
+    5:             <h4 class="media-heading">
+  app/views/welcome/index.html.erb:2:in `_app_views_welcome_index_html_erb___972181377870939142_28433360'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.9ms)
+  [1m[36mRecipe Load (1.7ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:45:27 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>All Recipes</h1>
+    2: <% @recipes.each do |recipe| %>
+    3:     <div class="media">
+    4:         <div class="media-body">
+    5:             <h4 class="media-heading">
+  app/views/welcome/index.html.erb:2:in `_app_views_welcome_index_html_erb___3237607658760086799_40089040'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.1ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:45:57 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>All Recipes</h1>
+    2: <% @recipes.each do |recipe| %>
+    3:     <div class="media">
+    4:         <div class="media-body">
+    5:             <h4 class="media-heading">
+  app/views/welcome/index.html.erb:2:in `_app_views_welcome_index_html_erb___3237607658760086799_41068920'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.0ms)
+  [1m[36m (13.6ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (9.6ms)[0m  [1mCREATE  INDEX "index_comments_on_recipe_id" ON "comments" ("recipe_id")[0m
+  [1m[35m (11.0ms)[0m  CREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (12.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (8.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170524030345')
+  [1m[36m (9.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170524025711')[0m
+  [1m[35m (7.7ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (9.9ms)[0m  CREATE  INDEX "index_comments_on_recipe_id" ON "comments" ("recipe_id")
+  [1m[36m (11.1ms)[0m  [1mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (8.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (7.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (8.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170524030345')[0m
+  [1m[35m (6.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170524025711')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Grapefruit"], ["body", "1/4 gallon"], ["created_at", "2017-05-25 20:47:11.929347"], ["updated_at", "2017-05-25 20:47:11.929347"]]
+  [1m[35m (10.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Coconut"], ["body", "2 quart"], ["created_at", "2017-05-25 20:47:11.943842"], ["updated_at", "2017-05-25 20:47:11.943842"]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hazelnut"], ["body", "1/3 tablespoon"], ["created_at", "2017-05-25 20:47:11.952025"], ["updated_at", "2017-05-25 20:47:11.952025"]]
+  [1m[35m (6.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Garlic"], ["body", "2 tablespoon"], ["created_at", "2017-05-25 20:47:11.960434"], ["updated_at", "2017-05-25 20:47:11.960434"]]
+  [1m[36m (7.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Extra Virgin Olive Oil"], ["body", "1/4 quart"], ["created_at", "2017-05-25 20:47:11.969777"], ["updated_at", "2017-05-25 20:47:11.969777"]]
+  [1m[35m (14.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Chickory"], ["body", "1/2 gallon"], ["created_at", "2017-05-25 20:47:11.985875"], ["updated_at", "2017-05-25 20:47:11.985875"]]
+  [1m[36m (8.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Wheatgrass juice"], ["body", "1/2 quart"], ["created_at", "2017-05-25 20:47:11.996502"], ["updated_at", "2017-05-25 20:47:11.996502"]]
+  [1m[35m (6.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Chia seeds"], ["body", "1/2 cup"], ["created_at", "2017-05-25 20:47:12.004780"], ["updated_at", "2017-05-25 20:47:12.004780"]]
+  [1m[36m (8.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Pinto Beans"], ["body", "1/2 quart"], ["created_at", "2017-05-25 20:47:12.015039"], ["updated_at", "2017-05-25 20:47:12.015039"]]
+  [1m[35m (8.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Margarine"], ["body", "1/4 tablespoon"], ["created_at", "2017-05-25 20:47:12.024941"], ["updated_at", "2017-05-25 20:47:12.024941"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Laboriosam exercitationem rerum adipisci temporibus aut suscipit. Ex necessitatibus accusamus. Nisi inventore in sunt. Dolorem necessitatibus neque iure rerum eum dolore. Consequuntur ipsum voluptas voluptatem et adipisci aut."], ["created_at", "2017-05-25 20:47:12.042842"], ["updated_at", "2017-05-25 20:47:12.042842"]]
+  [1m[35m (10.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Aut deleniti consectetur quo cumque voluptatum qui ut. Et voluptate magni. Pariatur consectetur culpa."], ["created_at", "2017-05-25 20:47:12.054979"], ["updated_at", "2017-05-25 20:47:12.054979"]]
+  [1m[36m (8.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Magnam sed esse sit saepe quia explicabo. Nobis quia qui et eveniet tempora sunt. Eaque deleniti iusto dolorem et dicta cupiditate. Quia veritatis eos non itaque officia. Non molestiae asperiores explicabo natus molestias voluptatem."], ["created_at", "2017-05-25 20:47:12.065311"], ["updated_at", "2017-05-25 20:47:12.065311"]]
+  [1m[35m (8.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Enim sit et molestiae quae recusandae rerum esse. Ut voluptates recusandae debitis quia neque incidunt. Deleniti suscipit non sed vel dolores."], ["created_at", "2017-05-25 20:47:12.075573"], ["updated_at", "2017-05-25 20:47:12.075573"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Nihil totam praesentium ratione dolore quia placeat dolores. Necessitatibus vel dicta distinctio qui. Omnis ipsam molestiae sapiente. Voluptatem rem rerum exercitationem quis doloribus iusto."], ["created_at", "2017-05-25 20:47:12.083631"], ["updated_at", "2017-05-25 20:47:12.083631"]]
+  [1m[35m (7.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Enim esse at. Magni blanditiis iste molestiae autem et. Earum amet dolores sunt. Rerum repellendus qui ut dolorum sed esse. Minus officiis occaecati assumenda maxime."], ["created_at", "2017-05-25 20:47:12.092867"], ["updated_at", "2017-05-25 20:47:12.092867"]]
+  [1m[36m (7.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Beatae dolores est incidunt asperiores. Et aut qui nihil dolorum. Nemo odit voluptatem mollitia et perferendis error sed."], ["created_at", "2017-05-25 20:47:12.101930"], ["updated_at", "2017-05-25 20:47:12.101930"]]
+  [1m[35m (8.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Ab est nihil et cum cumque voluptatibus blanditiis. Vero occaecati quos doloremque aut minima aut. Officiis soluta natus repellendus et. Et magni temporibus natus et."], ["created_at", "2017-05-25 20:47:12.112003"], ["updated_at", "2017-05-25 20:47:12.112003"]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Perferendis libero sunt. Consectetur quam mollitia id labore. Et qui mollitia in odit voluptatum."], ["created_at", "2017-05-25 20:47:12.119888"], ["updated_at", "2017-05-25 20:47:12.119888"]]
+  [1m[35m (10.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Quibusdam earum ullam accusantium voluptate. Eaque voluptatem explicabo. Quos dolore perferendis fugiat eos ipsam velit."], ["created_at", "2017-05-25 20:47:12.131647"], ["updated_at", "2017-05-25 20:47:12.131647"]]
+  [1m[36m (7.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Facere placeat aperiam officia in. Facilis ipsum quo voluptas amet consequuntur. Sed aut sit est repellat. Natus officiis distinctio fugiat voluptatem omnis vero."], ["created_at", "2017-05-25 20:47:12.140513"], ["updated_at", "2017-05-25 20:47:12.140513"]]
+  [1m[35m (6.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Dolor nihil molestias ut et adipisci. Magni praesentium quia quasi dolorum. Aspernatur ipsa non optio. Quis minima eos voluptas dolores. Voluptas ullam autem modi iste aliquid alias voluptatem."], ["created_at", "2017-05-25 20:47:12.148860"], ["updated_at", "2017-05-25 20:47:12.148860"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Commodi facilis ipsa maxime corporis. Quis sunt quia. Quibusdam veniam rem. Nobis ut dicta quam vel quod. Occaecati sint corrupti est."], ["created_at", "2017-05-25 20:47:12.164581"], ["updated_at", "2017-05-25 20:47:12.164581"]]
+  [1m[35m (8.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Officiis voluptatem praesentium laboriosam ut. Laudantium magnam minima atque. Rerum autem consequuntur repellendus."], ["created_at", "2017-05-25 20:47:12.175078"], ["updated_at", "2017-05-25 20:47:12.175078"]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Et aperiam non aut sit eaque nemo expedita. Nobis ut maiores deserunt officia. Sint sed consectetur sed ducimus atque dignissimos rem. Similique ipsa alias. Vitae veniam voluptas beatae quia eveniet et."], ["created_at", "2017-05-25 20:47:12.185108"], ["updated_at", "2017-05-25 20:47:12.185108"]]
+  [1m[35m (7.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Voluptatem iure accusantium voluptatibus excepturi qui nesciunt. Deserunt quaerat sed exercitationem ut eligendi quis. At tempore error. Repellat consectetur sequi voluptatem sed."], ["created_at", "2017-05-25 20:47:12.193766"], ["updated_at", "2017-05-25 20:47:12.193766"]]
+  [1m[36m (8.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Sed et ex officia magni cumque nemo. Non et magnam fugit ipsam. Adipisci a non dolor et esse. Alias in natus accusantium rerum et aut voluptate."], ["created_at", "2017-05-25 20:47:12.203553"], ["updated_at", "2017-05-25 20:47:12.203553"]]
+  [1m[35m (7.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Ab deleniti iure nemo et ut et aut. Qui non sapiente et aspernatur non est ullam. Molestiae magni ab. Laborum maiores qui harum nostrum ratione voluptas."], ["created_at", "2017-05-25 20:47:12.212764"], ["updated_at", "2017-05-25 20:47:12.212764"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Omnis similique nihil dolorem non dicta iste et. Dolorum non cupiditate aspernatur consequatur. Quia accusamus odio a officiis nisi. Rerum voluptatum facere a officia exercitationem."], ["created_at", "2017-05-25 20:47:12.220634"], ["updated_at", "2017-05-25 20:47:12.220634"]]
+  [1m[35m (7.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Sed et nihil. Aut illo tempora facere expedita. Perspiciatis sit adipisci est voluptatem. Dolor nihil est asperiores saepe fuga nulla aut. Et deleniti voluptatibus impedit error quam atque."], ["created_at", "2017-05-25 20:47:12.229672"], ["updated_at", "2017-05-25 20:47:12.229672"]]
+  [1m[36m (8.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Commodi ab iusto aut sed aspernatur quia. Ea libero omnis vero sequi iusto veniam. Quia consequatur eaque nihil laborum sunt ea ipsam."], ["created_at", "2017-05-25 20:47:12.239198"], ["updated_at", "2017-05-25 20:47:12.239198"]]
+  [1m[35m (8.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Non illum dolorum quaerat quisquam excepturi minima non. Repellendus voluptate dolores et ipsam rem officia. Odio repellat expedita."], ["created_at", "2017-05-25 20:47:12.248616"], ["updated_at", "2017-05-25 20:47:12.248616"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Odit ut et eum quas. Recusandae nemo vel est. Et quisquam qui officia. Tenetur alias rerum inventore repellendus iste soluta. Laborum numquam voluptate vero dicta nostrum facilis."], ["created_at", "2017-05-25 20:47:12.256400"], ["updated_at", "2017-05-25 20:47:12.256400"]]
+  [1m[35m (6.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)  [["body", "Magnam maxime sit voluptate sunt numquam deserunt. Maxime iusto inventore officia vero consequuntur. Ipsa harum minima quidem."], ["created_at", "2017-05-25 20:47:12.264413"], ["updated_at", "2017-05-25 20:47:12.264413"]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["body", "Vel id est quae distinctio fugit maiores tempore. Hic sed quia. Voluptatem alias tempore totam distinctio est."], ["created_at", "2017-05-25 20:47:12.272529"], ["updated_at", "2017-05-25 20:47:12.272529"]]
+  [1m[35m (7.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "recipes"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments"
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:47:24 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>All Recipes</h1>
+    2: <% @recipes.each do |recipe| %>
+    3:     <div class="media">
+    4:         <div class="media-body">
+    5:             <h4 class="media-heading">
+  app/views/welcome/index.html.erb:2:in `_app_views_welcome_index_html_erb__4366049220451768317_29229420'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.8ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:48:20 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>All Recipes</h1>
+    2: <% @recipes.each do |recipe| %>
+    3:     <div class="media">
+    4:         <div class="media-body">
+    5:             <h4 class="media-heading">
+  app/views/welcome/index.html.erb:2:in `_app_views_welcome_index_html_erb__4366049220451768317_29229420'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.7ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-25 20:48:27 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 349ms (Views: 348.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-25 20:48:32 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/index.html.erb within layouts/application (40.1ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fb299385f38>:0x007fb29934c1c0>
+Did you mean?  recip
+               recipe_url
+               @recipes):
+    3:     <div class="media">
+    4:         <div class="media-body">
+    5:             <h4 class="media-heading">
+    6:                 <%= link_to recipe.title, recipe %>
+    7:             </h4>
+    8:         </div>
+    9:     </div>
+  app/views/recipes/index.html.erb:6:in `block in _app_views_recipes_index_html_erb___946271593386176777_70202525575640'
+  app/views/recipes/index.html.erb:2:in `_app_views_recipes_index_html_erb___946271593386176777_70202525575640'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-25 20:49:14 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.erb within layouts/application (31.6ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x007fb299385f38>:0x007fb29a856a98>
+Did you mean?  recip
+               recipe_url
+               @recipes):
+    3:     <div class="media">
+    4:         <div class="media-body">
+    5:             <h4 class="media-heading">
+    6:                 <%= link_to recipe.title, recipe %>
+    7:             </h4>
+    8:         </div>
+    9:     </div>
+  app/views/recipes/index.html.erb:6:in `block in _app_views_recipes_index_html_erb___946271593386176777_70202525575640'
+  app/views/recipes/index.html.erb:2:in `_app_views_recipes_index_html_erb___946271593386176777_70202525575640'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.1ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-25 20:49:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/index.html.erb within layouts/application (52.2ms)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x00000005167088>:0x000000051587b8>
+Did you mean?  recip
+               recipe_url
+               @recipes):
+    3:     <div class="media">
+    4:         <div class="media-body">
+    5:             <h4 class="media-heading">
+    6:                 <%= link_to recipe.title, post_path(recipe.id) %>
+    7:             </h4>
+    8:         </div>
+    9:     </div>
+  app/views/recipes/index.html.erb:6:in `block in _app_views_recipes_index_html_erb___1727791991299270826_42508500'
+  app/views/recipes/index.html.erb:2:in `_app_views_recipes_index_html_erb___1727791991299270826_42508500'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-25 20:49:42 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.erb within layouts/application (36.3ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x00000005167088>:0x00000004f6fde8>
+Did you mean?  recip
+               recipe_url
+               @recipes):
+    3:     <div class="media">
+    4:         <div class="media-body">
+    5:             <h4 class="media-heading">
+    6:                 <%= link_to recipe.title, recipe_path(recipe.id) %>
+    7:             </h4>
+    8:         </div>
+    9:     </div>
+  app/views/recipes/index.html.erb:6:in `block in _app_views_recipes_index_html_erb___1727791991299270826_41644160'
+  app/views/recipes/index.html.erb:2:in `_app_views_recipes_index_html_erb___1727791991299270826_41644160'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.5ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-25 20:50:38 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/index.html.erb within layouts/application (28.2ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined local variable or method `recipe' for #<#<Class:0x00000004cc2c80>:0x00000004cb4bf8>
+Did you mean?  recip
+               recipe_url
+               @recipes):
+    3:     <div class="media">
+    4:         <div class="media-body">
+    5:             <h4 class="media-heading">
+    6:                 <%= link_to recipe.title, recipe %>
+    7:             </h4>
+    8:         </div>
+    9:     </div>
+  app/views/recipes/index.html.erb:6:in `block in _app_views_recipes_index_html_erb___1727791991299270826_40195960'
+  app/views/recipes/index.html.erb:2:in `_app_views_recipes_index_html_erb___1727791991299270826_40195960'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.5ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-25 20:51:28 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 386ms (Views: 384.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-05-25 20:51:32 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered recipes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-05-25 23:16:31 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered recipes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 168ms (Views: 161.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/2" for 69.47.251.101 at 2017-05-25 23:16:34 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered recipes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/2" for 69.47.251.101 at 2017-05-26 02:02:39 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendered recipes/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 124ms (Views: 118.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/3" for 69.47.251.101 at 2017-05-26 02:02:41 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered recipes/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-26 11:36:46 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (19.5ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 96ms (Views: 72.6ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-30 00:27:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 537ms (Views: 525.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-05-30 00:27:35 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 69.47.251.101 at 2017-05-30 00:27:35 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 69.47.251.101 at 2017-05-30 00:27:35 +0000
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 69.47.251.101 at 2017-05-30 00:27:35 +0000
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 69.47.251.101 at 2017-05-30 00:27:35 +0000
+
+
+Started GET "/assets/application.self-3d2b1085db6945c1ed2965f6b9561bfd4c3d4bfd17596a955c1ce8b4068f6b3f.css?body=1" for 69.47.251.101 at 2017-05-30 00:27:35 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-05-30 00:27:35 +0000
+
+
+Started GET "/assets/recipes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-05-30 00:27:35 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-05-30 00:27:35 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 69.47.251.101 at 2017-05-30 00:27:35 +0000
+
+
+Started GET "/new" for 69.47.251.101 at 2017-05-30 00:27:41 +0000
+
+ActionController::RoutingError (No route matches [GET] "/new"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.3ms)
+
+
+Started GET "/recipes/new" for 69.47.251.101 at 2017-05-30 00:28:03 +0000
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (637.6ms)
+Completed 200 OK in 691ms (Views: 677.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/recipes" for 69.47.251.101 at 2017-05-30 00:28:08 +0000
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZW48U41zVAn6kVX2NdMqjznjtvFwrWZBA/XF16ZHvFyiGfBqNRhDSkeufP8+6Py7NOWiibqzs4z2Kp7xBvjStA==", "recipe"=>{"title"=>"wwfwfwfw", "body"=>"fawfafaf"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "wwfwfwfw"], ["body", "fawfafaf"], ["created_at", "2017-05-30 00:28:08.388166"], ["updated_at", "2017-05-30 00:28:08.388166"]]
+  [1m[35m (10.9ms)[0m  commit transaction
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/11
+Completed 302 Found in 18ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/recipes/11" for 69.47.251.101 at 2017-05-30 00:28:08 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  Rendered recipes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 152ms (Views: 151.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/11" for 69.47.251.101 at 2017-05-30 00:29:12 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  Rendered recipes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/new" for 69.47.251.101 at 2017-05-30 00:29:16 +0000
+Processing by RecipesController#new as HTML
+  Rendered recipes/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipes" for 69.47.251.101 at 2017-05-30 00:29:42 +0000
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MuB0BwayhUjj/mxHyaDtCS42ElZh3oIee5lPwwmUs871l7g+vtmSC17BRU7Cmzs9IzAGLqvAV9OORhTlqSvdJg==", "recipe"=>{"title"=>"Cheesecake", "body"=>"Stuff and stuff"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Cheesecake"], ["body", "Stuff and stuff"], ["created_at", "2017-05-30 00:29:42.245433"], ["updated_at", "2017-05-30 00:29:42.245433"]]
+  [1m[36m (30.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/12
+Completed 302 Found in 37ms (ActiveRecord: 31.1ms)
+
+
+Started GET "/recipes/12" for 69.47.251.101 at 2017-05-30 00:29:42 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  Rendered recipes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-30 00:29:44 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 69.47.251.101 at 2017-05-30 00:29:49 +0000
+
+ActionController::RoutingError (No route matches [GET] "/index"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.3ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-30 00:29:53 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/12" for 69.47.251.101 at 2017-05-30 00:29:55 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  Rendered recipes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-30 00:34:51 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 97ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-30 00:34:52 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-30 00:34:56 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 89ms (Views: 83.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes/2" for 69.47.251.101 at 2017-05-30 00:34:58 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered recipes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/12" for 69.47.251.101 at 2017-05-30 00:35:00 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-30 00:41:32 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-05-30 00:41:34 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1/edit" for 69.47.251.101 at 2017-05-30 00:41:35 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered recipes/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/recipes/1" for 69.47.251.101 at 2017-05-30 00:41:37 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FYcYFgn4Y4CmNHCsqWzISStYMAUT9flABP6TxGh7BwnS8NQvsZN0wxsLWaWiVx59Jl4kfdnrLI3xIcjiyMRp4Q==", "recipe"=>{"title"=>"Grapefruit", "body"=>"1/4 gallons"}, "commit"=>"Save", "id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "body" = ?, "updated_at" = ? WHERE "recipes"."id" = ?[0m  [["body", "1/4 gallons"], ["updated_at", "2017-05-30 00:41:37.430413"], ["id", 1]]
+  [1m[35m (15.5ms)[0m  commit transaction
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/1
+Completed 302 Found in 21ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-05-30 00:41:37 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (64.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 99ms (Views: 32.9ms | ActiveRecord: 64.4ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-05-30 00:48:37 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 57ms (Views: 35.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/recipes/1" for 69.47.251.101 at 2017-05-30 00:48:39 +0000
+
+ActionController::RoutingError (No route matches [POST] "/recipes/1"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.5ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-30 00:49:02 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 98ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-30 00:49:06 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/2" for 69.47.251.101 at 2017-05-30 00:49:07 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered recipes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/2" for 69.47.251.101 at 2017-05-30 00:49:13 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered recipes/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/recipes/2" for 69.47.251.101 at 2017-05-30 00:49:15 +0000
+
+ActionController::RoutingError (No route matches [POST] "/recipes/2"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.4ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-30 01:39:16 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 373ms (Views: 362.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-30 01:39:20 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 76ms (Views: 68.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-05-30 01:39:22 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.7ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 64ms (Views: 51.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/recipes/1" for 69.47.251.101 at 2017-05-30 01:39:23 +0000
+Processing by RecipesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8ahgz2SybT6AxwmXUKAEHyt2oC26DuZ7H5cIl1+SvwY236z23Nl6fT34IJ5bm9IrJnC0VXAQM7bqSFOx/y3R7g==", "id"=>"1"}
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mSQL (2.6ms)[0m  [1mDELETE FROM "recipes" WHERE "recipes"."id" = ?[0m  [["id", 1]]
+  [1m[35m (18.6ms)[0m  commit transaction
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes
+Completed 302 Found in 58ms (ActiveRecord: 22.3ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-30 01:39:24 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes/2" for 69.47.251.101 at 2017-05-30 02:07:58 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered recipes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 92ms (Views: 68.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/recipes/2/edit" for 69.47.251.101 at 2017-05-30 02:07:59 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered recipes/_form.html.erb (537.3ms)
+  Rendered recipes/edit.html.erb within layouts/application (547.3ms)
+Completed 200 OK in 583ms (Views: 580.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/recipes/2" for 69.47.251.101 at 2017-05-30 02:08:01 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7ldh/UtyI+98KqhE6T0O3OWZ+7G7oWORMh/7OyJwi+YpIK3E8xk0rMEVgU3iBtjo6J/vyXG/tlzHwKAdgs/lDg==", "recipe"=>{"title"=>"Coconut", "body"=>"2 quarts"}, "commit"=>"Save", "id"=>"2"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered recipes/_form.html.erb (2.1ms)
+  Rendered recipes/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-30 02:08:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 289ms (Views: 277.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-30 02:08:44 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 83ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 69.47.251.101 at 2017-05-30 02:08:44 +0000
+Processing by WelcomeController#about as HTML
+  Rendered welcome/about.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 54ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-05-30 02:08:45 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-30 02:08:47 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 68ms (Views: 60.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/2" for 69.47.251.101 at 2017-05-30 02:08:49 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered recipes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 44ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/2/edit" for 69.47.251.101 at 2017-05-30 02:08:50 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered recipes/_form.html.erb (468.6ms)
+  Rendered recipes/edit.html.erb within layouts/application (472.4ms)
+Completed 200 OK in 506ms (Views: 505.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/recipes/2" for 69.47.251.101 at 2017-05-30 02:08:52 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ijyWwsUWAbtR/NEclhVE8wnwxFWRBS1ph5dpWs0A2qNNS1r7fX0W+OzD+BWdLpLHBPbQLVsb+KRySDJ8bb+0Sw==", "recipe"=>{"title"=>"Coconut", "body"=>"2 quarts"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered recipes/_form.html.erb (1.4ms)
+  Rendered recipes/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/2" for 69.47.251.101 at 2017-05-30 02:08:59 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered recipes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-30 02:09:00 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/8" for 69.47.251.101 at 2017-05-30 02:09:01 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered recipes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/11" for 69.47.251.101 at 2017-05-30 02:09:03 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered recipes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes/11/edit" for 69.47.251.101 at 2017-05-30 02:09:04 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered recipes/_form.html.erb (1.8ms)
+  Rendered recipes/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/recipes/11" for 69.47.251.101 at 2017-05-30 02:09:05 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VmzZ1IbFeAU3YizO3q3/nnPR0kLcZcZl9aMAGUabaZCRGxXtPq5vRopdBcfVlimqftfGOhZ7E6gAfFs/5iQHeA==", "recipe"=>{"title"=>"wwfwfwfw", "body"=>"fawfafafafsaf"}, "commit"=>"Save", "id"=>"11"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered recipes/_form.html.erb (1.4ms)
+  Rendered recipes/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/11" for 69.47.251.101 at 2017-05-30 02:09:11 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7WocMI4W82/56qhQeVAjHDa0mllpfhCawHsW33KgAi4qHdAJNn3kLETVgVlya/UoO7KOIaNgxVc1pE350h9sxg==", "recipe"=>{"title"=>"wwfwfwfw", "body"=>"fawfafafafsaf"}, "commit"=>"Save", "id"=>"11"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered recipes/_form.html.erb (1.3ms)
+  Rendered recipes/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/recipes/11" for 69.47.251.101 at 2017-05-30 02:10:20 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GXD5RQ7aKmSd2cXCaql0T1okxwIqAHnVlHyL+NlMxFLeBzV8trE9JyDm7MthkqJ7VyLTeuAerBhho9DeefOqug==", "recipe"=>{"title"=>"wwfwfwfw", "body"=>"fawfafafafsafqrgq35gqgqgq3gq3g3qgq3gq3g3qgq3g3qg"}, "commit"=>"Save", "id"=>"11"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "body" = ?, "updated_at" = ? WHERE "recipes"."id" = ?[0m  [["body", "fawfafafafsafqrgq35gqgqgq3gq3g3qgq3gq3g3qgq3g3qg"], ["updated_at", "2017-05-30 02:10:20.029740"], ["id", 11]]
+  [1m[35m (11.9ms)[0m  commit transaction
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/11
+Completed 302 Found in 17ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/recipes/11" for 69.47.251.101 at 2017-05-30 02:10:20 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered recipes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 90ms (Views: 88.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-30 02:11:11 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/new" for 69.47.251.101 at 2017-05-30 02:11:19 +0000
+Processing by RecipesController#new as HTML
+  Rendered recipes/_form.html.erb (1.4ms)
+  Rendered recipes/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/recipes" for 69.47.251.101 at 2017-05-30 02:11:28 +0000
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mMD3DLR5pvad9MWnXov4GlqSHG9/CnViObga2+T+vxtftzs1DBKxtSDL7K5VsC4uV5QIF7UUoK/MZ0H9REHR8w==", "recipe"=>{"title"=>"awfafaf", "body"=>"29u4hgfq0p9ghaipgnaigonawginawgiounag"}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "awfafaf"], ["body", "29u4hgfq0p9ghaipgnaigonawginawgiounag"], ["created_at", "2017-05-30 02:11:28.347811"], ["updated_at", "2017-05-30 02:11:28.347811"]]
+  [1m[36m (14.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/13
+Completed 302 Found in 18ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/recipes/13" for 69.47.251.101 at 2017-05-30 02:11:28 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered recipes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/recipes" for 69.47.251.101 at 2017-05-30 02:12:48 +0000
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mMD3DLR5pvad9MWnXov4GlqSHG9/CnViObga2+T+vxtftzs1DBKxtSDL7K5VsC4uV5QIF7UUoK/MZ0H9REHR8w==", "recipe"=>{"title"=>"", "body"=>""}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered recipes/_form.html.erb (1.3ms)
+  Rendered recipes/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 25.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-05-30 02:20:26 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/recipes" for 69.47.251.101 at 2017-05-30 02:20:31 +0000
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mMD3DLR5pvad9MWnXov4GlqSHG9/CnViObga2+T+vxtftzs1DBKxtSDL7K5VsC4uV5QIF7UUoK/MZ0H9REHR8w==", "recipe"=>{"title"=>"", "body"=>""}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered recipes/_form.html.erb (4.1ms)
+  Rendered recipes/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.1ms)
