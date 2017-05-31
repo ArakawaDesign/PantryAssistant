@@ -30,5 +30,7 @@ end
  gem 'turbolinks'
  # Bootstrap for standardized layouts, forms, buttons, etc.
  gem 'bootstrap-sass'
- # Handles user authentication
+ # Devise handles user authentication(sign up, sign in, sign out)
  gem 'devise'
+ # Pundit sets user roles and permissions
+ gem 'pundit'
