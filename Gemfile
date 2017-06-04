@@ -36,3 +36,5 @@ end
  gem 'pundit'
  # Redcarpet processes Markdown
  gem 'redcarpet'
+ # Social Share Button handles sharing to various social media sites
+ gem 'social-share-button'

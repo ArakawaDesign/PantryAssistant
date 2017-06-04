@@ -3666,3 +3666,218 @@ Processing by RecipesController#show as HTML
   [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
   Rendered recipes/show.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:23:36 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (44.6ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `social_share_button_tag' for #<#<Class:0x007fc7602789e8>:0x00000003047308>):
+     7:   <div class="col-md-4">
+     8:     <%= link_to "Edit", edit_recipe_path(@recipe), class: 'btn btn-success' %>
+     9:     <%= link_to "Delete Post", @recipe, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this recipe?'} %>
+    10:     <%= social_share_button_tag(@recipe.title, 'data-twitter-title' => 'TheTitleForTwitter') %>
+    11:   </div>
+    12: </div>
+  app/views/recipes/show.html.erb:10:in `_app_views_recipes_show_html_erb__4520620833450128548_25200860'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.4ms)
+
+
+Started PATCH "/recipes/1" for 69.47.251.101 at 2017-06-04 19:24:00 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SWNHUCj2+oUMxNZfKUjvr9BMjEQSkhIPJcw3gx6pJwCMcOJfQP+v3KNu5EOZzGFBPRp+BZMcR35tkwCNDWIStw==", "recipe"=>{"title"=>"Bread", "body"=>"**Omnis dolorem voluptatem**ut quae illum. Quibusdam _voluptas_ rerum animi. Temporibus beatae id. Eum `accusamus`\r\n\r\n````\r\n itaque. Inventore veniam id assumenda.\r\n````"}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/1
+Completed 302 Found in 57ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:24:01 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (525.4ms)
+Completed 200 OK in 3793ms (Views: 3789.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-54effcc973c412a4b64d38252ec51c6f13402100f19e36ff6d0c8a190b6dbff4.css?body=1" for 69.47.251.101 at 2017-06-04 19:24:04 +0000
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 69.47.251.101 at 2017-06-04 19:24:05 +0000
+
+
+Started GET "/assets/social-share-button.self-402eb947298f6d4b9ce63dafd8a3529bbc6ac19494a76f1b41b45b1f92c92b57.js?body=1" for 69.47.251.101 at 2017-06-04 19:24:05 +0000
+
+
+Started GET "/assets/social-share-button/twitter-7b64ce0117a85c5d52ed45c27707af61d9b0e0d590284baa287cfe87867b9ae1.svg" for 69.47.251.101 at 2017-06-04 19:24:05 +0000
+
+
+Started GET "/assets/social-share-button/facebook-03210e1663ee772e93ed5d344cdb36657b68342821aaebe982f2f984915990b3.svg" for 69.47.251.101 at 2017-06-04 19:24:05 +0000
+
+
+Started GET "/assets/social-share-button/google_plus-50c049fbb29cd3346f1bf9349017b644bcd00a53b56bd156728850f57bd85c0a.svg" for 69.47.251.101 at 2017-06-04 19:24:05 +0000
+
+
+Started GET "/assets/social-share-button/delicious-0c55f72f821aae5352691f13eb64bf3435573e2169d0720477ed367b2f1ed28e.svg" for 69.47.251.101 at 2017-06-04 19:24:05 +0000
+
+
+Started GET "/assets/social-share-button/tumblr-330a37f93cce7c27a750188d0bfdbed3a22f566b807e64d21131dcdc94e08ec3.svg" for 69.47.251.101 at 2017-06-04 19:24:05 +0000
+
+
+Started GET "/assets/social-share-button/pinterest-86203d156197cce4087fee058b920d275c535df5fd59d8caa83da0ef41d1ec7f.svg" for 69.47.251.101 at 2017-06-04 19:24:05 +0000
+
+
+Started GET "/assets/social-share-button/email-7067143cbe69d9d8cf25e67fda1a315d133c2b79074a09088bd712cc5c81135d.svg" for 69.47.251.101 at 2017-06-04 19:24:05 +0000
+
+
+Started GET "/assets/social-share-button/reddit-730429c239b6990b67d0d4aaaeb6e9fe48c62267f889a412e81f5f1066ec625f.svg" for 69.47.251.101 at 2017-06-04 19:24:05 +0000
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:25:00 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 90ms (Views: 87.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:25:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (441.4ms)
+Completed 200 OK in 717ms (Views: 676.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:25:39 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:25:41 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:26:05 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.8ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1856ms (Views: 1853.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-ab3481ca0e7e50b6359754e20bd7e9df795c16b9dfc5f7c0443f155366621615.css?body=1" for 69.47.251.101 at 2017-06-04 19:26:07 +0000
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:26:13 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1703ms (Views: 1699.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-9fcce8f184cf1535518899e9a4833e69586ea5523b5141851bf51740e8e203f4.css?body=1" for 69.47.251.101 at 2017-06-04 19:26:15 +0000
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:26:20 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 2060ms (Views: 2057.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-f3f76df56c2260dbfb3d7986563290e909ff96f088c26903ef78dba3b32c21f1.css?body=1" for 69.47.251.101 at 2017-06-04 19:26:23 +0000
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:26:53 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1939ms (Views: 1936.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e7faa6a83a80cdcc5024234a0c9f1fd06376f13e760f833869084ac7a92135dd.css?body=1" for 69.47.251.101 at 2017-06-04 19:26:56 +0000
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:28:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (376.1ms)
+Completed 200 OK in 687ms (Views: 647.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes/1" for 173.252.124.239 at 2017-06-04 19:29:03 +0000
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 173.252.124.216 at 2017-06-04 19:29:03 +0000
+Processing by Devise::SessionsController#new as */*
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (9.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 94ms (Views: 91.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/1" for 54.236.9.118 at 2017-06-04 19:29:35 +0000
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 54.236.9.118 at 2017-06-04 19:29:35 +0000
+Processing by Devise::SessionsController#new as */*
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (8.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 192ms (Views: 190.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:30:51 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 78ms (Views: 74.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-06-04 19:40:50 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.2ms)
