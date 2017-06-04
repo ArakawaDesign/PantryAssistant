@@ -34,3 +34,5 @@ end
  gem 'devise'
  # Pundit sets user roles and permissions
  gem 'pundit'
+ # Redcarpet processes Markdown
+ gem 'redcarpet'

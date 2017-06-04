@@ -3350,3 +3350,319 @@ Processing by RecipesController#index as HTML
   [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
   Rendered recipes/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 161ms (Views: 147.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-06-04 18:59:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 419ms (Views: 403.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-06-04 18:59:25 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-06-04 18:59:25 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 69.47.251.101 at 2017-06-04 18:59:25 +0000
+
+
+Started GET "/" for 69.47.251.101 at 2017-06-04 18:59:28 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 78ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes" for 69.47.251.101 at 2017-06-04 18:59:30 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 68ms (Views: 42.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 18:59:32 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 69.47.251.101 at 2017-06-04 18:59:33 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (10.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 101ms (Views: 83.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes/new" for 69.47.251.101 at 2017-06-04 18:59:37 +0000
+Processing by RecipesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 69.47.251.101 at 2017-06-04 18:59:37 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 18:59:39 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 69.47.251.101 at 2017-06-04 18:59:39 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 69.47.251.101 at 2017-06-04 18:59:40 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HBYWs6P/+wD5nvtsorKQur8qsNdOUPCrJ9znKeYeZh0hZ7FuLnqk9llqCYZv0Y8OnkzKcZtq9DDdvYZtnPHPqw==", "user"=>{"email"=>"arakawa.ryan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "arakawa.ryan@gmail.com"]]
+Completed 401 Unauthorized in 184ms (ActiveRecord: 0.4ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HBYWs6P/+wD5nvtsorKQur8qsNdOUPCrJ9znKeYeZh0hZ7FuLnqk9llqCYZv0Y8OnkzKcZtq9DDdvYZtnPHPqw==", "user"=>{"email"=>"arakawa.ryan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 203ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 69.47.251.101 at 2017-06-04 18:59:44 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2vxrnrx9YI2lToYnC0vOM1Urw6LRPJQ6K8O3V+Hi06LnjcxDMfg/ewW6dM3GKNGHdE25BAQGkKHRotYTmw16FA==", "user"=>{"email"=>"arakawa.ryan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "arakawa.ryan@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-06-04 18:59:44.856647"], ["current_sign_in_at", "2017-06-04 18:59:44.856647"], ["last_sign_in_ip", "69.47.251.101"], ["current_sign_in_ip", "69.47.251.101"], ["sign_in_count", 1], ["updated_at", "2017-06-04 18:59:44.858209"], ["id", 1]]
+  [1m[36m (10.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/1
+Completed 302 Found in 171ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 18:59:44 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 30.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes/1/edit" for 69.47.251.101 at 2017-06-04 18:59:46 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/_form.html.erb (6.2ms)
+  Rendered recipes/edit.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/1" for 69.47.251.101 at 2017-06-04 18:59:52 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SzSua3PQWDPLkj3d0G7wC8n+23RUtOwNXNB/uxxs+bSOJwtkG9kNamQ4D8Fg6n7lJKgpNdU6uXwUj0i1D6fMAw==", "recipe"=>{"title"=>"Bread", "body"=>"*Omnis dolorem voluptatem*ut quae illum. Quibusdam voluptas rerum animi. Temporibus beatae id. Eum accusamus itaque. Inventore veniam id assumenda."}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "body" = ?, "updated_at" = ? WHERE "recipes"."id" = ?[0m  [["body", "*Omnis dolorem voluptatem*ut quae illum. Quibusdam voluptas rerum animi. Temporibus beatae id. Eum accusamus itaque. Inventore veniam id assumenda."], ["updated_at", "2017-06-04 18:59:52.812048"], ["id", 1]]
+  [1m[35m (10.4ms)[0m  commit transaction
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/1
+Completed 302 Found in 17ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 18:59:52 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes/1/edit" for 69.47.251.101 at 2017-06-04 18:59:55 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered recipes/_form.html.erb (1.5ms)
+  Rendered recipes/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/1" for 69.47.251.101 at 2017-06-04 18:59:58 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gdjzGyE59TU2phQ0ZsnE8sux2LDI48pMH26bx7AStxVEy1YUSTCgbJkMJijWTUocJucq8Ultnz1XMazJo9mCog==", "recipe"=>{"title"=>"Bread", "body"=>"**Omnis dolorem voluptatem**ut quae illum. Quibusdam voluptas rerum animi. Temporibus beatae id. Eum accusamus itaque. Inventore veniam id assumenda."}, "commit"=>"Save", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "recipes" SET "body" = ?, "updated_at" = ? WHERE "recipes"."id" = ?  [["body", "**Omnis dolorem voluptatem**ut quae illum. Quibusdam voluptas rerum animi. Temporibus beatae id. Eum accusamus itaque. Inventore veniam id assumenda."], ["updated_at", "2017-06-04 18:59:58.433288"], ["id", 1]]
+  [1m[36m (14.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/1
+Completed 302 Found in 20ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 18:59:58 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 78ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1/edit" for 69.47.251.101 at 2017-06-04 19:00:00 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/_form.html.erb (1.5ms)
+  Rendered recipes/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/1" for 69.47.251.101 at 2017-06-04 19:00:09 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WHqEDFSc2RMYUPPbrsFNvtwZW3I6zZJupXPHYo8d6L2daSEDPJWMSrf6wcceRcNQMU+pM7tDxx/tLPBsnNbdCg==", "recipe"=>{"title"=>"Bread", "body"=>"**Omnis dolorem voluptatem**ut quae illum. Quibusdam voluptas rerum animi. Temporibus beatae id. Eum `accusamus`\r\n``` itaque. Inventore veniam id assumenda.```"}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "body" = ?, "updated_at" = ? WHERE "recipes"."id" = ?[0m  [["body", "**Omnis dolorem voluptatem**ut quae illum. Quibusdam voluptas rerum animi. Temporibus beatae id. Eum `accusamus`\r\n``` itaque. Inventore veniam id assumenda.```"], ["updated_at", "2017-06-04 19:00:09.703307"], ["id", 1]]
+  [1m[35m (11.3ms)[0m  commit transaction
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/1
+Completed 302 Found in 19ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:00:09 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 33.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1/edit" for 69.47.251.101 at 2017-06-04 19:00:11 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered recipes/_form.html.erb (1.3ms)
+  Rendered recipes/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/recipes/1" for 69.47.251.101 at 2017-06-04 19:00:13 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sBowEPc0tYa4A1rGS8wTCI2d4VkrxmqJvspFTAolWil1CZUfnz3g3xepaNr7SJ3mYMsTGKpIP/j2lXJCGe5vng==", "recipe"=>{"title"=>"Bread", "body"=>"**Omnis dolorem voluptatem**ut quae illum. Quibusdam voluptas rerum animi. Temporibus beatae id. Eum `accusamus`\r\n```` itaque. Inventore veniam id assumenda.````"}, "commit"=>"Save", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "recipes" SET "body" = ?, "updated_at" = ? WHERE "recipes"."id" = ?  [["body", "**Omnis dolorem voluptatem**ut quae illum. Quibusdam voluptas rerum animi. Temporibus beatae id. Eum `accusamus`\r\n```` itaque. Inventore veniam id assumenda.````"], ["updated_at", "2017-06-04 19:00:13.993035"], ["id", 1]]
+  [1m[36m (17.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/1
+Completed 302 Found in 23ms (ActiveRecord: 17.6ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:00:14 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 121ms (Views: 118.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1/edit" for 69.47.251.101 at 2017-06-04 19:00:16 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/_form.html.erb (1.8ms)
+  Rendered recipes/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/recipes/1" for 69.47.251.101 at 2017-06-04 19:00:18 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6UwyWlYHHsL7hz8A5w85rcV9APLwsCakA38y2Py86GMsX5dVPg5Lm1QtDRxXi7dDKCvys3E+c9VLIAXW73fd1A==", "recipe"=>{"title"=>"Bread", "body"=>"**Omnis dolorem voluptatem**ut quae illum. Quibusdam voluptas rerum animi. Temporibus beatae id. Eum `accusamus`\r\n\r\n```` itaque. Inventore veniam id assumenda.````"}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "recipes" SET "body" = ?, "updated_at" = ? WHERE "recipes"."id" = ?[0m  [["body", "**Omnis dolorem voluptatem**ut quae illum. Quibusdam voluptas rerum animi. Temporibus beatae id. Eum `accusamus`\r\n\r\n```` itaque. Inventore veniam id assumenda.````"], ["updated_at", "2017-06-04 19:00:18.538329"], ["id", 1]]
+  [1m[35m (12.0ms)[0m  commit transaction
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/1
+Completed 302 Found in 17ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:00:18 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes/1/edit" for 69.47.251.101 at 2017-06-04 19:00:21 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered recipes/_form.html.erb (1.3ms)
+  Rendered recipes/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/recipes/1" for 69.47.251.101 at 2017-06-04 19:00:25 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q9rkdOKWRkfSgH7OcdSHxo+4Xh1LzhN0uBIMMUTEYdxuyUF7ip8THn0qTNLBUAkoYu6sXMpARgXwTTs/Vw9Uaw==", "recipe"=>{"title"=>"Bread", "body"=>"**Omnis dolorem voluptatem**ut quae illum. Quibusdam voluptas rerum animi. Temporibus beatae id. Eum `accusamus`\r\n\r\n````\r\n itaque. Inventore veniam id assumenda.\r\n````"}, "commit"=>"Save", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "recipes" SET "body" = ?, "updated_at" = ? WHERE "recipes"."id" = ?  [["body", "**Omnis dolorem voluptatem**ut quae illum. Quibusdam voluptas rerum animi. Temporibus beatae id. Eum `accusamus`\r\n\r\n````\r\n itaque. Inventore veniam id assumenda.\r\n````"], ["updated_at", "2017-06-04 19:00:25.667244"], ["id", 1]]
+  [1m[36m (14.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/1
+Completed 302 Found in 20ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:00:25 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1/edit" for 69.47.251.101 at 2017-06-04 19:01:10 +0000
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/_form.html.erb (1.4ms)
+  Rendered recipes/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/recipes/1" for 69.47.251.101 at 2017-06-04 19:01:17 +0000
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QC2BzBMgsreL9a7jrKGmRJi1S07rE5BiDBWhum+mjOyFPiTDeynn7iRfnP8cJSiqdeO5D2qdxRNESpa0fG25Ww==", "recipe"=>{"title"=>"Bread", "body"=>"**Omnis dolorem voluptatem**ut quae illum. Quibusdam _voluptas_ rerum animi. Temporibus beatae id. Eum `accusamus`\r\n\r\n````\r\n itaque. Inventore veniam id assumenda.\r\n````"}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "body" = ?, "updated_at" = ? WHERE "recipes"."id" = ?[0m  [["body", "**Omnis dolorem voluptatem**ut quae illum. Quibusdam _voluptas_ rerum animi. Temporibus beatae id. Eum `accusamus`\r\n\r\n````\r\n itaque. Inventore veniam id assumenda.\r\n````"], ["updated_at", "2017-06-04 19:01:17.301069"], ["id", 1]]
+  [1m[35m (9.7ms)[0m  commit transaction
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/1
+Completed 302 Found in 16ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-06-04 19:01:17 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.3ms)
