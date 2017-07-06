@@ -10,14 +10,29 @@
     </div>
   <% end %>
   
-  <%= form_group_tag(recipe.errors[:title]) do %>
+  <%= form_group_tag(@recipe.errors[:title]) do %>
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control', placeholder: "Enter recipe title" %>
   <% end %>
   
-  <%= form_group_tag(recipe.errors[:body]) do %>
+  <%= form_group_tag(@recipe.errors[:servings]) do %>
+    <%= f.label :servings %>
+    <%= f.text_area :servings, class: 'form-control', placeholder: "Number of servings" %>
+  <% end %>
+  
+  <%= form_group_tag(@recipe.errors[:quantity]) do %>
+    <%= f.label :quantity %>
+    <%= f.text_area :quantity, class: 'form-control', placeholder: "Enter quantity" %>
+  <% end %>
+  
+  <%= form_group_tag(@recipe.errors[:ingredients]) do %>
+    <%= f.label :ingredients %>
+    <%= f.text_area :ingredients, rows: 8, class: 'form-control', placeholder: "Enter ingredients" %>
+  <% end %>
+  
+  <%= form_group_tag(@recipe.errors[:body]) do %>
     <%= f.label :body %>
-    <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter recipe body" %>
+    <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter recipe directions" %>
   <% end %>
 
   <div class="form-group">

@@ -1,0 +1,2 @@
+module RecipeWizardHelper
+end

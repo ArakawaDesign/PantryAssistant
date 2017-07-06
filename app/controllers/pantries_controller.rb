@@ -18,7 +18,7 @@ class PantriesController < ApplicationController
   end
   
   def create
-    @pantry = current_user.pantries.build(pantry_params)
+    @pantry = current_user.pantries.build(params.require(:pantry).permit(:ingredient, :description, :quantity))
     if @pantry.save
       flash[:notice] = "Ingredient was saved."
       redirect_to pantries_path
@@ -58,10 +58,4 @@ class PantriesController < ApplicationController
       render :show
     end
   end
-  
-  private
-    def pantry_params
-      params.require(:pantry).permit(:ingredient, :description, :quantity)
-    end
-    
 end

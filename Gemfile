@@ -40,3 +40,7 @@ end
  gem 'social-share-button'
  # Simple form helps with creating forms for user input
  gem 'simple_form'
+ # Wicked helps create step by step wizards
+ gem 'wicked'
+ # Does simple conversions
+ gem 'ruby-measurement'

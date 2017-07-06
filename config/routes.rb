@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   resources :pantries
   devise_for :users
   resources :recipes
+  resources :recipe_wizard
+  
+  resources :recipes, only: [] do
+    resources :comments, only: [:create, :destroy]
+  end
   
   get 'about' => 'welcome#about'
   

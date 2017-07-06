@@ -15,6 +15,8 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
     @recipe.title = params[:recipe][:title]
     @recipe.body = params[:recipe][:body]
+    @recipe.quantity = params[:recipe][:quantity]
+    @recipe.servings = params[:recipe][:servings]
     
     if @recipe.save
       flash[:notice] = "Recipe was saved."
@@ -33,6 +35,8 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.title = params[:recipe][:title]
     @recipe.body = params[:recipe][:body]
+    @recipe.quantity = params[:recipe][:quantity]
+    @recipe.servings = params[:recipe][:servings]
  
     if @recipe.save
       flash[:notice] = "Recipe was updated."

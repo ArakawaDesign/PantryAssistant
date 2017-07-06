@@ -10,7 +10,10 @@ end
 10.times do
     Recipe.create!(
         title: Faker::Food.ingredient,
-        body: Faker::Lorem.paragraph
+        body: Faker::Lorem.paragraph,
+        quantity: Faker::Number.between(1, 10),
+        servings: Faker::Number.between(1, 10),
+        ingredients: Faker::Lorem.paragraph
     )
 end
 
