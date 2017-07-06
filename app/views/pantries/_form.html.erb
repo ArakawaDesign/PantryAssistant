@@ -1,0 +1,31 @@
+<%= form_for @pantry do |f| %>
+  <% if @pantry.errors.any? %>
+    <div class="alert alert-danger">
+        <h4><%= pluralize(@pantry.errors.count, "error") %>.</h4>
+        <ul>
+          <% @pantry.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+    </div>
+  <% end %>
+  
+  <%= form_group_tag(@pantry.errors[:ingredient]) do %>
+    <%= f.label :ingredient %>
+    <%= f.text_field :ingredient, class: 'form-control', placeholder: "Enter ingredient name" %>
+  <% end %>
+  
+  <%= form_group_tag(@pantry.errors[:description]) do %>
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: 8, class: 'form-control', placeholder: "Enter measurement" %>
+  <% end %>
+  
+  <%= form_group_tag(@pantry.errors[:quantity]) do %>
+    <%= f.label :quantity %>
+    <%= f.text_area :quantity, rows: 8, class: 'form-control', placeholder: "Enter quantity" %>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.submit "Save", class: 'btn btn-success' %>
+  </div>
+<% end %>

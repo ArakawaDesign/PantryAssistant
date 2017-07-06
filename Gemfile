@@ -38,3 +38,5 @@ end
  gem 'redcarpet'
  # Social Share Button handles sharing to various social media sites
  gem 'social-share-button'
+ # Simple form helps with creating forms for user input
+ gem 'simple_form'

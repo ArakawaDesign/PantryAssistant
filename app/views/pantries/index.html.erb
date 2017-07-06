@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+    <h4><%= link_to "New Ingredient", new_pantry_path, class: 'btn btn-success' %></h4>
+    <% @pantries.each do |pantry| %>
+        <div class="media">
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <%= link_to pantry.quantity.to_s + " " + pantry.description + " " + pantry.ingredient, pantry %>
+                </h4>
+            </div>
+        </div>
+    
+    <% end %>
+<% else %>
+    <%= render 'layouts/static_landing_page' %>
+<% end %>
