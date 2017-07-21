@@ -44,3 +44,6 @@ end
  gem 'wicked'
  # Does simple conversions
  gem 'ruby-measurement'
+ gem 'bootstrap-editable-rails'
+ gem 'x-editable-rails'
+ gem 'acts-as-taggable-on', '~> 4.0'

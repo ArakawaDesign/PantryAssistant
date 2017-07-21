@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require bootstrap-editable
+//= require bootstrap-editable-rails
 //= require_tree .
 //= require social-share-button

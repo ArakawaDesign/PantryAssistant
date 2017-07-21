@@ -10990,3 +10990,2217 @@ Processing by RecipesController#index as HTML
   Rendered recipes/_converter.html.erb (0.0ms)
   Rendered recipes/index.html.erb within layouts/application (2.2ms)
 Completed 200 OK in 99ms (Views: 86.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:05:02 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 102ms (Views: 71.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:05:04 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:05:17 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (66.7ms)
+Completed 200 OK in 150ms (Views: 128.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:05:23 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 73ms (Views: 69.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pantries" for 69.47.251.101 at 2017-07-06 21:05:23 +0000
+Processing by PantriesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPantry Load (0.3ms)[0m  SELECT "pantries".* FROM "pantries" WHERE "pantries"."user_id" = ?  [["user_id", 1]]
+  Rendered pantries/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 82ms (Views: 76.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:05:24 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 82ms (Views: 78.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-07-06 21:05:25 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_comment.html.erb (8.9ms)
+  Rendered comments/_form.html.erb (1.6ms)
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 109ms (Views: 95.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:05:28 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:05:38 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (No route matches {:action=>"parse_comments", :controller=>"recipes"}):
+    25: </div>
+    26: 
+    27: <h1>Text to PDF </h1>
+    28: <% form_tag :action => 'parse_comments' do %>
+    29:     <%= text_area :myform, :comments, :cols => '40', :rows => '5' %>
+    30:     <%= submit_tag "Submit" %>
+    31: <% end %>
+  app/views/recipes/index.html.erb:28:in `_app_views_recipes_index_html_erb___2815548037675578455_69972541322140'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.4ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:06:31 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (No route matches {:action=>"parse_comments", :controller=>"recipes"}):
+    25: </div>
+    26: 
+    27: <h1>Text to PDF </h1>
+    28: <% form_tag :action => :parse_comments do %>
+    29:     <%= text_area :myform, :comments, :cols => '40', :rows => '5' %>
+    30:     <%= submit_tag "Submit" %>
+    31: <% end %>
+  app/views/recipes/index.html.erb:28:in `_app_views_recipes_index_html_erb___2815548037675578455_69972566955700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.6ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:06:39 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"parse_comments", :controller=>"recipes"}):
+    25: </div>
+    26: 
+    27: <h1>Text to PDF </h1>
+    28: <% form_tag :action => :parse_comments do %>
+    29:     <%= text_area :myform, :comments, :cols => '40', :rows => '5' %>
+    30:     <%= submit_tag "Submit" %>
+    31: <% end %>
+  app/views/recipes/index.html.erb:28:in `_app_views_recipes_index_html_erb___2815548037675578455_69972566955700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.2ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:06:48 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (No route matches {:action=>"parse_comments", :controller=>"recipes"}):
+    25: </div>
+    26: 
+    27: <h1>Text to PDF </h1>
+    28: <% form_tag :action => :parse_comments do %>
+    29:     <%= text_area :myform, :comments, :cols => '40', :rows => '5' %>
+    30:     <%= submit_tag "Submit" %>
+    31: <% end %>
+  app/views/recipes/index.html.erb:28:in `_app_views_recipes_index_html_erb___2815548037675578455_69972566955700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.8ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:06:58 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (No route matches {:action=>"parse_comments", :controller=>"recipes"}):
+    25: </div>
+    26: 
+    27: <h1>Text to PDF </h1>
+    28: <% form_tag :action => :parse_comments do %>
+    29:     <%= text_area :myform, :comments, :cols => '40', :rows => '5' %>
+    30:     <%= submit_tag "Submit" %>
+    31: <% end %>
+  app/views/recipes/index.html.erb:28:in `_app_views_recipes_index_html_erb___2815548037675578455_69972566955700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.7ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:07:36 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (No route matches {:action=>"parse_comments", :controller=>"recipes"}):
+    25: </div>
+    26: 
+    27: <h1>Text to PDF </h1>
+    28: <% form_tag :action => :parse_comments do %>
+    29:     <%= text_area :myform %>
+    30:     <%= submit_tag "Submit" %>
+    31: <% end %>
+  app/views/recipes/index.html.erb:28:in `_app_views_recipes_index_html_erb___2815548037675578455_69972556524700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.9ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:08:56 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 2.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"parse_comments", :controller=>"recipes"}):
+    25: </div>
+    26: 
+    27: <h1>Text to PDF </h1>
+    28: <% form_tag :action => :parse_comments do %>
+    29:     <%= text_area :myform, :comments, :cols => '40', :rows => '5' %>
+    30:     <%= submit_tag "Submit" %>
+    31: <% end %>
+  app/views/recipes/index.html.erb:28:in `_app_views_recipes_index_html_erb___2815548037675578455_69972502616980'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.1ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:09:09 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.erb within layouts/application (26.5ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `recipe_path' for #<#<Class:0x007f477ca22d38>:0x007f477c9f6170>
+Did you mean?  recipe_wizard_path):
+     5:         <div class="media">
+     6:             <div class="media-body">
+     7:                 <h4 class="media-heading">
+     8:                     <%= link_to recipe.title, recipe %>
+     9:                 </h4>
+    10:             </div>
+    11:         </div>
+  app/views/recipes/index.html.erb:8:in `block in _app_views_recipes_index_html_erb___2815548037675578455_69972502616980'
+  app/views/recipes/index.html.erb:4:in `each'
+  app/views/recipes/index.html.erb:4:in `_app_views_recipes_index_html_erb___2815548037675578455_69972502616980'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.3ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:09:19 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (No route matches {:action=>"parse_comments", :controller=>"recipes"}):
+    25: </div>
+    26: 
+    27: <h1>Text to PDF </h1>
+    28: <% form_tag :action => :parse_comments do %>
+    29:     <%= text_area :myform, :comments, :cols => '40', :rows => '5' %>
+    30:     <%= submit_tag "Submit" %>
+    31: <% end %>
+  app/views/recipes/index.html.erb:28:in `_app_views_recipes_index_html_erb___2815548037675578455_69972502616980'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.2ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:15:20 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (No route matches {:action=>"parse_comments", :controller=>"recipes"}):
+    25: </div>
+    26: 
+    27: <h1>Text to PDF </h1>
+    28: <% form_tag :action => :parse_comments do %>
+    29:     <%= text_area :myform, :comments, :cols => '40', :rows => '5' %>
+    30:     <%= submit_tag "Submit" %>
+    31: <% end %>
+  app/views/recipes/index.html.erb:28:in `_app_views_recipes_index_html_erb___2815548037675578455_69972506599540'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.8ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:15:35 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 85ms (Views: 65.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:21:55 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 90ms (Views: 70.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:22:14 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 64ms (Views: 46.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:22:21 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 82ms (Views: 47.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:22:23 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:22:29 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 103ms (Views: 72.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:23:52 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 81ms (Views: 62.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:24:59 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 69ms (Views: 49.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:25:05 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 65ms (Views: 45.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:25:12 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 84ms (Views: 64.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:27:17 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 67ms (Views: 48.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:27:42 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 65ms (Views: 46.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:46:01 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (64.4ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined local variable or method `say' for #<#<Class:0x007f4783eb0560>:0x007f4783fbc5d0>):
+    24:     </div>
+    25: </div>
+    26: 
+    27: <%= say -%>
+  app/views/recipes/index.html.erb:27:in `_app_views_recipes_index_html_erb___2815548037675578455_69972502616220'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.6ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:46:12 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 121ms (Views: 100.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:53:11 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 107ms (Views: 76.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/recipes/1" for 69.47.251.101 at 2017-07-06 21:53:13 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (1.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered comments/_comment.html.erb (24.5ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/show.html.erb within layouts/application (72.6ms)
+Completed 200 OK in 197ms (Views: 176.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/pantries" for 69.47.251.101 at 2017-07-06 21:53:17 +0000
+Processing by PantriesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPantry Load (4.0ms)[0m  SELECT "pantries".* FROM "pantries" WHERE "pantries"."user_id" = ?  [["user_id", 1]]
+  Rendered pantries/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 251ms (Views: 239.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/pantries/new" for 69.47.251.101 at 2017-07-06 21:53:18 +0000
+Processing by PantriesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pantries/_form.html.erb (3.5ms)
+  Rendered pantries/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 104ms (Views: 90.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/pantries" for 69.47.251.101 at 2017-07-06 21:53:24 +0000
+Processing by PantriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N8iXSx5xPGEycDTnVnM2LU56o8UYavqsJU+1Si+UeIpaBBKdAZCvUPu/3tc4UdufAcxJN4MnSs3MHIJF21MUfg==", "pantry"=>{"ingredient"=>"Vegetable Oil", "description"=>"2waf", "quantity"=>"141"}, "commit"=>"Save"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "pantries" ("ingredient", "description", "quantity", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["ingredient", "Vegetable Oil"], ["description", "2waf"], ["quantity", 141], ["user_id", 1], ["created_at", "2017-07-06 21:53:24.523730"], ["updated_at", "2017-07-06 21:53:24.523730"]]
+  [1m[36m (10.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://pantry-assistant-waypointna.c9users.io/pantries
+Completed 302 Found in 20ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/pantries" for 69.47.251.101 at 2017-07-06 21:53:24 +0000
+Processing by PantriesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPantry Load (0.1ms)[0m  [1mSELECT "pantries".* FROM "pantries" WHERE "pantries"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered pantries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 94ms (Views: 91.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pantries/1" for 69.47.251.101 at 2017-07-06 21:53:28 +0000
+Processing by PantriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPantry Load (0.3ms)[0m  [1mSELECT  "pantries".* FROM "pantries" WHERE "pantries"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pantries/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 84ms (Views: 81.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pantries/1/edit" for 69.47.251.101 at 2017-07-06 21:53:29 +0000
+Processing by PantriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPantry Load (0.1ms)[0m  [1mSELECT  "pantries".* FROM "pantries" WHERE "pantries"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pantries/_form.html.erb (5.7ms)
+  Rendered pantries/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 81ms (Views: 78.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/pantries/1" for 69.47.251.101 at 2017-07-06 21:53:32 +0000
+Processing by PantriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4VPwCJAWM6sB+gBAwNf2xwdHIzYh+uUI37UU+qvsayCMn3Xej/egmsg16nCu9Rt1SPHJxLq3VWk25iP1XysH1A==", "pantry"=>{"ingredient"=>"Vegetable Oil", "description"=>"cups", "quantity"=>"141"}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPantry Load (0.1ms)[0m  [1mSELECT  "pantries".* FROM "pantries" WHERE "pantries"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pantries" SET "description" = ?, "updated_at" = ? WHERE "pantries"."id" = ?[0m  [["description", "cups"], ["updated_at", "2017-07-06 21:53:32.274051"], ["id", 1]]
+  [1m[35m (6.8ms)[0m  commit transaction
+Redirected to https://pantry-assistant-waypointna.c9users.io/pantries
+Completed 302 Found in 12ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/pantries" for 69.47.251.101 at 2017-07-06 21:53:32 +0000
+Processing by PantriesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPantry Load (0.1ms)[0m  SELECT "pantries".* FROM "pantries" WHERE "pantries"."user_id" = ?  [["user_id", 1]]
+  Rendered pantries/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 169ms (Views: 66.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pantries/new" for 69.47.251.101 at 2017-07-06 21:53:33 +0000
+Processing by PantriesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pantries/_form.html.erb (1.9ms)
+  Rendered pantries/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/pantries" for 69.47.251.101 at 2017-07-06 21:53:49 +0000
+Processing by PantriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YmyJsOAAX0lBbhognig/ZzZj9oFEvALey0j3nBLFsAcPoAxm/+HMeIih8BDwCtLVedUcc9/xsr8iG8CT5gLc8w==", "pantry"=>{"ingredient"=>"Eggplant", "description"=>"piece", "quantity"=>"56"}, "commit"=>"Save"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pantries" ("ingredient", "description", "quantity", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["ingredient", "Eggplant"], ["description", "piece"], ["quantity", 56], ["user_id", 1], ["created_at", "2017-07-06 21:53:49.357260"], ["updated_at", "2017-07-06 21:53:49.357260"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://pantry-assistant-waypointna.c9users.io/pantries
+Completed 302 Found in 15ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/pantries" for 69.47.251.101 at 2017-07-06 21:53:49 +0000
+Processing by PantriesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPantry Load (0.1ms)[0m  [1mSELECT "pantries".* FROM "pantries" WHERE "pantries"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered pantries/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-06 21:53:52 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 116ms (Views: 113.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes/3" for 69.47.251.101 at 2017-07-06 21:53:53 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."recipe_id" = ?  [["recipe_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (1.1ms)
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/3" for 173.252.86.216 at 2017-07-06 21:53:57 +0000
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"3"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 173.252.86.206 at 2017-07-06 21:53:57 +0000
+Processing by Devise::SessionsController#new as */*
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 62ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pantries" for 69.47.251.101 at 2017-07-06 21:54:33 +0000
+Processing by PantriesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPantry Load (0.1ms)[0m  SELECT "pantries".* FROM "pantries" WHERE "pantries"."user_id" = ?  [["user_id", 1]]
+  Rendered pantries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 67ms (Views: 64.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/recipe_wizard.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-07-07 00:21:54 +0000
+
+
+Started GET "/" for 67.167.59.41 at 2017-07-11 00:29:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.4ms)
+  Rendered recipes/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 3108ms (Views: 3073.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/pantries.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/recipe_wizard.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/bootstrap-editable.self-740b04ff8462e42a50301910454d681b02b0c404192855465cb940516df01cce.js?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/recipes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/application.self-09be34ac8a77508cd897cde73d213838428742e6e34543ce3ffbfbb984caf348.css?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/bootstrap-editable-rails.self-63facdb2741874eecb2614fe13298b1a3272fb204b42e1ade657135a64889c41.js?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/pantries.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/recipe_wizard.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/recipes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/application.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for 67.167.59.41 at 2017-07-11 00:29:47 +0000
+
+
+Started GET "/assets/social-share-button.self-402eb947298f6d4b9ce63dafd8a3529bbc6ac19494a76f1b41b45b1f92c92b57.js?body=1" for 67.167.59.41 at 2017-07-11 00:29:48 +0000
+
+
+Started GET "/recipes/1" for 67.167.59.41 at 2017-07-11 00:29:51 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 67.167.59.41 at 2017-07-11 00:29:51 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (8.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 107ms (Views: 94.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in" for 67.167.59.41 at 2017-07-11 00:29:59 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IKpDmUe4jfXeRw/5376apnLFOkASBrtmrUBegK1DdTywg3lKBuwyDSey0ymFZCdmbz9RMEicZM5s9D9QzA9szg==", "user"=>{"email"=>"arakawa.ryan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "arakawa.ryan@gmail.com"]]
+Completed 401 Unauthorized in 200ms (ActiveRecord: 0.3ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IKpDmUe4jfXeRw/5376apnLFOkASBrtmrUBegK1DdTywg3lKBuwyDSey0ymFZCdmbz9RMEicZM5s9D9QzA9szg==", "user"=>{"email"=>"arakawa.ryan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 191ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 67.167.59.41 at 2017-07-11 00:30:03 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DbaZVnpqRmBxJdfV4uQAssPIBmmM6qXyuJEnFqpOKZedn6OFOz75mIjQCwW4Pr1y3jJtGdZwelp5JUbGywIwZQ==", "user"=>{"email"=>"arakawa.ryan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "arakawa.ryan@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2017-07-11 00:30:03.924889"], ["current_sign_in_ip", "67.167.59.41"], ["sign_in_count", 2], ["updated_at", "2017-07-11 00:30:03.926079"], ["id", 1]]
+  [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/1
+Completed 302 Found in 157ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/recipes/1" for 67.167.59.41 at 2017-07-11 00:30:04 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."recipe_id" = ?  [["recipe_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered comments/_comment.html.erb (6.9ms)
+  Rendered comments/_form.html.erb (1.6ms)
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 99ms (Views: 94.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/social-share-button/facebook-03210e1663ee772e93ed5d344cdb36657b68342821aaebe982f2f984915990b3.svg" for 67.167.59.41 at 2017-07-11 00:30:04 +0000
+
+
+Started GET "/assets/social-share-button/twitter-7b64ce0117a85c5d52ed45c27707af61d9b0e0d590284baa287cfe87867b9ae1.svg" for 67.167.59.41 at 2017-07-11 00:30:05 +0000
+
+
+Started GET "/assets/social-share-button/pinterest-86203d156197cce4087fee058b920d275c535df5fd59d8caa83da0ef41d1ec7f.svg" for 67.167.59.41 at 2017-07-11 00:30:05 +0000
+
+
+Started GET "/assets/social-share-button/email-7067143cbe69d9d8cf25e67fda1a315d133c2b79074a09088bd712cc5c81135d.svg" for 67.167.59.41 at 2017-07-11 00:30:05 +0000
+
+
+Started GET "/assets/social-share-button/reddit-730429c239b6990b67d0d4aaaeb6e9fe48c62267f889a412e81f5f1066ec625f.svg" for 67.167.59.41 at 2017-07-11 00:30:05 +0000
+
+
+Started GET "/pantries" for 67.167.59.41 at 2017-07-11 00:33:17 +0000
+Processing by PantriesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPantry Load (0.2ms)[0m  SELECT "pantries".* FROM "pantries" WHERE "pantries"."user_id" = ?  [["user_id", 1]]
+  Rendered pantries/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 62ms (Views: 57.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 67.167.59.41 at 2017-07-11 00:33:20 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 65ms (Views: 62.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/1" for 67.167.59.41 at 2017-07-11 00:33:21 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."recipe_id" = ?[0m  [["recipe_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_comment.html.erb (3.7ms)
+  Rendered comments/_form.html.erb (0.9ms)
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pantries" for 67.167.59.41 at 2017-07-11 00:33:29 +0000
+Processing by PantriesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPantry Load (0.1ms)[0m  [1mSELECT "pantries".* FROM "pantries" WHERE "pantries"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered pantries/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 70ms (Views: 67.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pantries/1" for 67.167.59.41 at 2017-07-11 00:33:30 +0000
+Processing by PantriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPantry Load (0.2ms)[0m  [1mSELECT  "pantries".* FROM "pantries" WHERE "pantries"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered pantries/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pantries/new" for 67.167.59.41 at 2017-07-11 00:33:34 +0000
+Processing by PantriesController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pantries/_form.html.erb (4.1ms)
+  Rendered pantries/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 195ms (Views: 190.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/pantries" for 67.167.59.41 at 2017-07-11 00:33:46 +0000
+Processing by PantriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QtY02vinuy4rvA7giaHKS0Zgrwe6Tecqimr5TCLv6yCs5Vofpopv7bzA39ns3/HrRA5+JNma2a6qhux75hkfYg==", "pantry"=>{"ingredient"=>"Sugar", "description"=>"Cups", "quantity"=>"4"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pantries" ("ingredient", "description", "quantity", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["ingredient", "Sugar"], ["description", "Cups"], ["quantity", 4], ["user_id", 1], ["created_at", "2017-07-11 00:33:46.432892"], ["updated_at", "2017-07-11 00:33:46.432892"]]
+  [1m[35m (15.2ms)[0m  commit transaction
+Redirected to https://pantry-assistant-waypointna.c9users.io/pantries
+Completed 302 Found in 22ms (ActiveRecord: 15.8ms)
+
+
+Started GET "/pantries" for 67.167.59.41 at 2017-07-11 00:33:46 +0000
+Processing by PantriesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPantry Load (0.1ms)[0m  SELECT "pantries".* FROM "pantries" WHERE "pantries"."user_id" = ?  [["user_id", 1]]
+  Rendered pantries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 75ms (Views: 72.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pantries/2" for 67.167.59.41 at 2017-07-11 00:34:01 +0000
+Processing by PantriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPantry Load (0.1ms)[0m  SELECT  "pantries".* FROM "pantries" WHERE "pantries"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pantries/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 67ms (Views: 64.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pantries/2/edit" for 67.167.59.41 at 2017-07-11 00:34:03 +0000
+Processing by PantriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPantry Load (0.1ms)[0m  SELECT  "pantries".* FROM "pantries" WHERE "pantries"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pantries/_form.html.erb (2.2ms)
+  Rendered pantries/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/pantries/2" for 67.167.59.41 at 2017-07-11 00:34:06 +0000
+Processing by PantriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2M03C7HfzBgEgS5d9QMDyIuUtsX/htMkF3tARqT4L0k2/lnO7/IY25P9/2SQfThoifpn5pxR7aA3l1VxYA7bCw==", "pantry"=>{"ingredient"=>"Eggplant", "description"=>"pieces", "quantity"=>"56"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPantry Load (0.2ms)[0m  SELECT  "pantries".* FROM "pantries" WHERE "pantries"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pantries" SET "description" = ?, "updated_at" = ? WHERE "pantries"."id" = ?  [["description", "pieces"], ["updated_at", "2017-07-11 00:34:06.535103"], ["id", 2]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://pantry-assistant-waypointna.c9users.io/pantries
+Completed 302 Found in 14ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/pantries" for 67.167.59.41 at 2017-07-11 00:34:06 +0000
+Processing by PantriesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPantry Load (0.1ms)[0m  [1mSELECT "pantries".* FROM "pantries" WHERE "pantries"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered pantries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pantries" for 67.167.59.41 at 2017-07-11 00:34:09 +0000
+Processing by PantriesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPantry Load (0.2ms)[0m  [1mSELECT "pantries".* FROM "pantries" WHERE "pantries"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered pantries/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for 67.167.59.41 at 2017-07-11 00:34:11 +0000
+Processing by WelcomeController#about as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered welcome/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 87ms (Views: 84.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 67.167.59.41 at 2017-07-11 00:43:25 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 52ms (Views: 50.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes/6" for 67.167.59.41 at 2017-07-11 00:43:30 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."recipe_id" = ?[0m  [["recipe_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered comments/_comment.html.erb (3.3ms)
+  Rendered comments/_form.html.erb (1.0ms)
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 123ms (Views: 120.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes/8" for 67.167.59.41 at 2017-07-11 00:43:33 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."recipe_id" = ?[0m  [["recipe_id", 8]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (1.5ms)
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 176ms (Views: 173.1ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ActsAsTaggableOnMigration (20170713223551)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar) [0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "taggings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag_id" integer, "taggable_id" integer, "taggable_type" varchar, "tagger_id" integer, "tagger_type" varchar, "context" varchar(128), "created_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_taggings_on_tag_id" ON "taggings" ("tag_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_taggings_on_taggable_id_and_taggable_type_and_context" ON "taggings" ("taggable_id", "taggable_type", "context")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170713223551"]]
+  [1m[35m (14.1ms)[0m  commit transaction
+Migrating to AddMissingUniqueIndices (20170713223552)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_tags_on_name" ON "tags" ("name")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1mDROP INDEX "index_taggings_on_tag_id"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mDROP INDEX "index_taggings_on_taggable_id_and_taggable_type_and_context"[0m
+  [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "taggings_idx" ON "taggings" ("tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170713223552"]]
+  [1m[35m (9.8ms)[0m  commit transaction
+Migrating to AddTaggingsCounterCacheToTags (20170713223553)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "tags" ADD "taggings_count" integer DEFAULT 0
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT  "tags".* FROM "tags"  ORDER BY "tags"."id" ASC LIMIT 1000[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170713223553"]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddMissingTaggableIndex (20170713223554)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='taggings_idx' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='taggings_idx' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_taggings_on_taggable_id_and_taggable_type_and_context" ON "taggings" ("taggable_id", "taggable_type", "context")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170713223554"]]
+  [1m[35m (9.1ms)[0m  commit transaction
+Migrating to ChangeCollationForTagNames (20170713223555)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170713223555"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddMissingIndexes (20170713223556)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='taggings_idx' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='taggings_idx' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1mCREATE  INDEX "index_taggings_on_tag_id" ON "taggings" ("tag_id")[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='taggings_idx' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='taggings_idx' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_taggings_on_taggable_id" ON "taggings" ("taggable_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='taggings_idx' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='taggings_idx' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_taggings_on_taggable_type" ON "taggings" ("taggable_type")
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='taggings_idx' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='taggings_idx' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_taggings_on_tagger_id" ON "taggings" ("tagger_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tagger_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tagger_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='taggings_idx' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='taggings_idx' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_taggings_on_context" ON "taggings" ("context")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_context' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tagger_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tagger_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='taggings_idx' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='taggings_idx' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_taggings_on_tagger_id_and_tagger_type" ON "taggings" ("tagger_id", "tagger_type")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tagger_id_and_tagger_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tagger_id_and_tagger_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_context' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tagger_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tagger_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='taggings_idx' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='taggings_idx' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "taggings_idy" ON "taggings" ("taggable_id", "taggable_type", "tagger_id", "context")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170713223556"]]
+  [1m[35m (10.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_recipe_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_recipe_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='taggings_idy' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='taggings_idy' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tagger_id_and_tagger_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tagger_id_and_tagger_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_context' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tagger_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tagger_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_taggable_id_and_taggable_type_and_context' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='taggings_idx' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='taggings_idx' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tags_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tags_on_name' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  ORDER BY "recipes"."id" DESC LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND "taggings"."context" = ?  [["taggable_id", 10], ["taggable_type", "Recipe"], ["context", "ingredients"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ?[0m  [["taggable_id", 10], ["taggable_type", "Recipe"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.5ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'ingredients' AND taggings.tagger_id IS NULL)  [["taggable_id", 10], ["taggable_type", "Recipe"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('eggs'))[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (1 = 0)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('eggs'))
+  [1m[36mActsAsTaggableOn::Tag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" WHERE "tags"."name" = 'Eggs' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("name") VALUES (?)  [["name", "Eggs"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.0ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'ingredients' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 10], ["taggable_type", "Recipe"]]
+  [1m[35mActsAsTaggableOn::Tagging Exists (0.2ms)[0m  SELECT  1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 1 AND "taggings"."taggable_type" = 'Recipe' AND "taggings"."taggable_id" = 10 AND "taggings"."context" = 'ingredients' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "taggings" ("tag_id", "context", "taggable_id", "taggable_type", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["tag_id", 1], ["context", "ingredients"], ["taggable_id", 10], ["taggable_type", "Recipe"], ["created_at", "2017-07-13 22:40:46.845778"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = ?[0m  [["id", 1]]
+  [1m[35m (12.9ms)[0m  commit transaction
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('eggs'))[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes" JOIN taggings recipes_taggings_2d52658  ON recipes_taggings_2d52658.taggable_id = recipes.id AND recipes_taggings_2d52658.taggable_type = 'Recipe' AND recipes_taggings_2d52658.tag_id = 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('eggs') OR LOWER(name) = LOWER('milk') OR LOWER(name) = LOWER('sugar'))
+  [1m[36mActsAsTaggableOn::Tag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" WHERE "tags"."name" = 'Milk' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("name") VALUES (?)  [["name", "Milk"]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "tags" WHERE "tags"."name" = 'Sugar' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "tags" ("name") VALUES (?)  [["name", "Sugar"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'ingredients' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 10], ["taggable_type", "Recipe"]]
+  [1m[35mActsAsTaggableOn::Tagging Exists (0.2ms)[0m  SELECT  1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 2 AND "taggings"."taggable_type" = 'Recipe' AND "taggings"."taggable_id" = 10 AND "taggings"."context" = 'ingredients' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "taggings" ("tag_id", "context", "taggable_id", "taggable_type", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["tag_id", 2], ["context", "ingredients"], ["taggable_id", 10], ["taggable_type", "Recipe"], ["created_at", "2017-07-13 22:47:53.709212"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = ?[0m  [["id", 2]]
+  [1m[35mActsAsTaggableOn::Tagging Exists (0.2ms)[0m  SELECT  1 AS one FROM "taggings" WHERE ("taggings"."tag_id" = 3 AND "taggings"."taggable_type" = 'Recipe' AND "taggings"."taggable_id" = 10 AND "taggings"."context" = 'ingredients' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "taggings" ("tag_id", "context", "taggable_id", "taggable_type", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["tag_id", 3], ["context", "ingredients"], ["taggable_id", 10], ["taggable_type", "Recipe"], ["created_at", "2017-07-13 22:47:53.714757"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT  "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = ?[0m  [["id", 3]]
+  [1m[35m (16.8ms)[0m  commit transaction
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('eggs') OR LOWER(name) = LOWER('milk'))[0m
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes" JOIN taggings recipes_taggings_2d52658  ON recipes_taggings_2d52658.taggable_id = recipes.id AND recipes_taggings_2d52658.taggable_type = 'Recipe' AND recipes_taggings_2d52658.tag_id = 1 JOIN taggings recipes_taggings_f2f4dec  ON recipes_taggings_f2f4dec.taggable_id = recipes.id AND recipes_taggings_f2f4dec.taggable_type = 'Recipe' AND recipes_taggings_f2f4dec.tag_id = 2
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('eggs') OR LOWER(name) = LOWER('milk'))[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes" JOIN taggings recipes_taggings_2d52658  ON recipes_taggings_2d52658.taggable_id = recipes.id AND recipes_taggings_2d52658.taggable_type = 'Recipe' AND recipes_taggings_2d52658.tag_id = 1 JOIN taggings recipes_taggings_f2f4dec  ON recipes_taggings_f2f4dec.taggable_id = recipes.id AND recipes_taggings_f2f4dec.taggable_type = 'Recipe' AND recipes_taggings_f2f4dec.tag_id = 2 LEFT OUTER JOIN taggings recipes_taggings_group  ON recipes_taggings_group.taggable_id = recipes.id AND recipes_taggings_group.taggable_type = 'Recipe' GROUP BY recipes.id HAVING COUNT(recipes_taggings_group.taggable_id) = 2
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('eggs') OR LOWER(name) = LOWER('cream'))[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE (1 = 0)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('eggs') OR LOWER(name) = LOWER('milk'))[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes" JOIN taggings recipes_taggings_2d52658  ON recipes_taggings_2d52658.taggable_id = recipes.id AND recipes_taggings_2d52658.taggable_type = 'Recipe' AND recipes_taggings_2d52658.tag_id = 1 JOIN taggings recipes_taggings_f2f4dec  ON recipes_taggings_f2f4dec.taggable_id = recipes.id AND recipes_taggings_f2f4dec.taggable_type = 'Recipe' AND recipes_taggings_f2f4dec.tag_id = 2
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:01:03 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.2ms)
+  Rendered recipes/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 885ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( converter.js )` to `config/initializers/assets.rb` and restart your server):
+     5:   <meta name="viewport" content="width=device-width, initial-scale=1">
+     6:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+     7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+     8:   <%= javascript_include_tag 'converter', 'data-turbolinks-track' => true %>
+     9:   <%= csrf_meta_tags %>
+    10: </head>
+    11: <body>
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___941139877695136729_31618060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.6ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:01:42 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( converter.js )` to `config/initializers/assets.rb` and restart your server):
+     5:   <meta name="viewport" content="width=device-width, initial-scale=1">
+     6:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+     7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+     8:   <%= javascript_include_tag 'converter', 'data-turbolinks-track' => true %>
+     9:   <%= csrf_meta_tags %>
+    10: </head>
+    11: <body>
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___941139877695136729_31618060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.1ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:01:45 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( converter.js )` to `config/initializers/assets.rb` and restart your server):
+     5:   <meta name="viewport" content="width=device-width, initial-scale=1">
+     6:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+     7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+     8:   <%= javascript_include_tag 'converter', 'data-turbolinks-track' => true %>
+     9:   <%= csrf_meta_tags %>
+    10: </head>
+    11: <body>
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___941139877695136729_31618060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.3ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:01:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.4ms)
+  Rendered recipes/index.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 473ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( converter.js )` to `config/initializers/assets.rb` and restart your server):
+     5:   <meta name="viewport" content="width=device-width, initial-scale=1">
+     6:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+     7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+     8:   <%= javascript_include_tag 'converter', 'data-turbolinks-track' => true %>
+     9:   <%= csrf_meta_tags %>
+    10: </head>
+    11: <body>
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4340895747195949941_37231440'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.7ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:02:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.2ms)
+  Rendered recipes/index.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 415ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( converter.js )` to `config/initializers/assets.rb` and restart your server):
+     5:   <meta name="viewport" content="width=device-width, initial-scale=1">
+     6:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+     7:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+     8:   <%= javascript_include_tag 'converter', 'data-turbolinks-track' => true %>
+     9:   <%= csrf_meta_tags %>
+    10: </head>
+    11: <body>
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2916423853236279865_41542020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.7ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:02:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.3ms)
+  Rendered recipes/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 448ms (Views: 394.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/pantries.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/recipe_wizard.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/recipes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/application.self-09be34ac8a77508cd897cde73d213838428742e6e34543ce3ffbfbb984caf348.css?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/bootstrap-editable.self-740b04ff8462e42a50301910454d681b02b0c404192855465cb940516df01cce.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/bootstrap-editable-rails.self-63facdb2741874eecb2614fe13298b1a3272fb204b42e1ade657135a64889c41.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/converter.self-2610c126ae9bfc8a4934784070d81ad6cc4a2529fe66b7bdaf02d8b936e33d2d.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/pantries.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/recipe_wizard.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/recipes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/social-share-button.self-402eb947298f6d4b9ce63dafd8a3529bbc6ac19494a76f1b41b45b1f92c92b57.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/assets/application.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for 69.47.251.101 at 2017-07-21 02:02:44 +0000
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:15:47 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (2.1ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 238ms (Views: 233.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/pantries.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-07-21 02:15:47 +0000
+
+
+Started GET "/assets/recipe_wizard.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-07-21 02:15:48 +0000
+
+
+Started GET "/assets/recipes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-07-21 02:15:48 +0000
+
+
+Started GET "/assets/application.self-09be34ac8a77508cd897cde73d213838428742e6e34543ce3ffbfbb984caf348.css?body=1" for 69.47.251.101 at 2017-07-21 02:15:48 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-07-21 02:15:48 +0000
+
+
+Started GET "/assets/converter.self-3ed9c14f19545e04b87bff57c71bbe929513a7ca52cd13d32338e170dcb53e5c.js?body=1" for 69.47.251.101 at 2017-07-21 02:15:48 +0000
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:16:16 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.8ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 77ms (Views: 74.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:16:48 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 60ms (Views: 57.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:17:24 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 57ms (Views: 54.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:17:39 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:27:44 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:35:18 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 158ms (Views: 156.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:37:02 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:40:20 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 104ms (Views: 101.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/convert-units.js" for 69.47.251.101 at 2017-07-21 02:40:21 +0000
+
+ActionController::RoutingError (No route matches [GET] "/convert-units.js"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.5ms)
+
+
+Started GET "/convert-units.js" for 69.47.251.101 at 2017-07-21 02:40:21 +0000
+
+ActionController::RoutingError (No route matches [GET] "/convert-units.js"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.8ms)
+[npm-pipeline-rails] starting 'npm install'
+[npm-pipeline-rails] 'npm install' exited with 254 status
+[npm-pipeline-rails] starting 'npm install'
+[npm-pipeline-rails] 'npm install' exited with 254 status
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:44:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.3ms)
+  Rendered recipes/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 725ms (Views: 661.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/convert-units.js" for 69.47.251.101 at 2017-07-21 02:44:02 +0000
+
+ActionController::RoutingError (No route matches [GET] "/convert-units.js"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.2ms)
+
+
+Started GET "/convert-units.js" for 69.47.251.101 at 2017-07-21 02:44:02 +0000
+
+ActionController::RoutingError (No route matches [GET] "/convert-units.js"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.1ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:47:27 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 268ms (Views: 231.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/convert-units.js" for 69.47.251.101 at 2017-07-21 02:47:27 +0000
+
+ActionController::RoutingError (No route matches [GET] "/convert-units.js"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.7ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:47:37 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (1.0ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 116ms (Views: 113.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/convert-units.js" for 69.47.251.101 at 2017-07-21 02:47:37 +0000
+
+ActionController::RoutingError (No route matches [GET] "/convert-units.js"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.0ms)
+
+
+Started GET "/convert-units.js" for 69.47.251.101 at 2017-07-21 02:47:38 +0000
+
+ActionController::RoutingError (No route matches [GET] "/convert-units.js"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.5ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:49:08 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/vendor/assets/javascripts/js-quantities-master/js-quantities-master/build/quantities.js" for 69.47.251.101 at 2017-07-21 02:49:08 +0000
+
+ActionController::RoutingError (No route matches [GET] "/vendor/assets/javascripts/js-quantities-master/js-quantities-master/build/quantities.js"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.8ms)
+
+
+Started GET "/vendor/assets/javascripts/js-quantities-master/js-quantities-master/build/quantities.js" for 69.47.251.101 at 2017-07-21 02:49:08 +0000
+
+ActionController::RoutingError (No route matches [GET] "/vendor/assets/javascripts/js-quantities-master/js-quantities-master/build/quantities.js"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.5ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:49:38 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 74ms (Views: 72.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/javascripts/js-quantities-master/js-quantities-master/build/quantities.js" for 69.47.251.101 at 2017-07-21 02:49:38 +0000
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/js-quantities-master/js-quantities-master/build/quantities.js"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.1ms)
+
+
+Started GET "/assets/javascripts/js-quantities-master/js-quantities-master/build/quantities.js" for 69.47.251.101 at 2017-07-21 02:49:39 +0000
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/js-quantities-master/js-quantities-master/build/quantities.js"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.1ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:49:46 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:54:21 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 204ms (Views: 201.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/converter.self-48e199c74418ac3374246b54da94b142ed6bdb45ce5e711a2e032c931c64088b.js?body=1" for 69.47.251.101 at 2017-07-21 02:54:21 +0000
+
+
+Started GET "/" for 69.47.251.101 at 2017-07-21 02:55:12 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.1ms)
+  Rendered recipes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 0.3ms)
