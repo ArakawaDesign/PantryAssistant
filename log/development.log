@@ -13204,3 +13204,34 @@ Processing by RecipesController#index as HTML
   Rendered recipes/_converter.html.erb (0.1ms)
   Rendered recipes/index.html.erb within layouts/application (1.8ms)
 Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/new" for 69.47.251.101 at 2017-07-21 03:05:22 +0000
+Processing by RecipesController#new as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 69.47.251.101 at 2017-07-21 03:05:23 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 106ms (Views: 90.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 69.47.251.101 at 2017-07-21 03:05:26 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8YKazOLoUHhBigUdQ/UBhud1U63U1eanJvm42FAeqonxdogKNDzJ6sV8MP0IvezzogjDN4X+o3YK+2wE/g9VRQ==", "user"=>{"email"=>"arakawa.ryan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "arakawa.ryan@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-07-11 00:30:03.924889"], ["current_sign_in_at", "2017-07-21 03:05:26.831749"], ["last_sign_in_ip", "67.167.59.41"], ["current_sign_in_ip", "69.47.251.101"], ["sign_in_count", 3], ["updated_at", "2017-07-21 03:05:26.834702"], ["id", 1]]
+  [1m[36m (14.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/new
+Completed 302 Found in 249ms (ActiveRecord: 16.5ms)
+
+
+Started GET "/recipes/new" for 69.47.251.101 at 2017-07-21 03:05:26 +0000
+Processing by RecipesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered recipes/_form.html.erb (35.5ms)
+  Rendered recipes/new.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 114ms (Views: 111.3ms | ActiveRecord: 0.7ms)
