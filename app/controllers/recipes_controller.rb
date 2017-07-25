@@ -1,6 +1,11 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = policy_scope(Recipe)
+    #@recipes = policy_scope(Recipe)
+    @recipes = if params[:search]
+      Recipe.where('title LIKE ?',  "%#{params[:search]}%")
+    else
+      Recipe.all
+    end
   end
 
   def show
@@ -57,5 +62,9 @@ class RecipesController < ApplicationController
       flash.now[:alert] = "There was an error deleting recipe."
       render :show
     end
+  end
+  
+  def recipe_params
+    params.require(:recipe).permit(:title)
   end
 end

@@ -1,4 +1,14 @@
 <h1>All Recipes</h1>
+
+<%= form_tag(recipes_path, method: :get) do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+<%= form_tag(recipes_path, method: :get) do %>
+  <%= submit_tag 'Reset', name: nil %>
+<% end %>
+<br>
+
 <div class="row">
     <div class="col-md-8">
     <% @recipes.each do |recipe| %>

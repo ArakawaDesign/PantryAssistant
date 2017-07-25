@@ -37,44 +37,42 @@
     <% end %>
     <p>
       <label>FROM</label>
-      <select onchange="lengthConverter(this.init)">
-        <option init="tsp">tsp</option>
-        <option init="tbsp">tbsp</option>
-        <option init="cup">cup</option>
-        <option init="pnt">pint</option>
-        <option init="qt">quart</option>
-        <option init="gal">gallon</option>
-        <option init="oz">oz</option>
-        <option init="lb">lb</option>
-        <option init="ml">ml</option>
-        <option init="l">liter</option>
-        <option init="C">Celsius</option>
-        <option init="F">Fahrenheit</option>
-        <option init="g">gram</option>
-        <option init="kg">kilogram</option>
+      <select id="init" onchange="converter(this.init)">
+        <option value="tsp">tsp</option>
+        <option value="tbsp">tbsp</option>
+        <option value="cup">cup</option>
+        <option value="pnt">pint</option>
+        <option value="qt">quart</option>
+        <option value="gal">gallon</option>
+        <option value="oz">oz</option>
+        <option value="lb">lb</option>
+        <option value="g">grams</option>
+        <option value="F">Fahrenheit</option>
+        <option value="C">Celsius</option>
+        <option value="K">Kelvin</option>
       </select>
-      <input id="inputFeet" type="number" placeholder="Feet" oninput="lengthConverter(this.value)" onchange="lengthConverter(this.value)">      
+      
+      <input id="inputMeasurement" type="number" placeholder="Measurement" oninput="converter(this.value)" onchange="converter(this.value)">      
+     
       <label>TO</label>
-      <select>
-        <option result="tsp">tsp</option>
-        <option result="tbsp">tbsp</option>
-        <option result="cup">cup</option>
-        <option result="pnt">pint</option>
-        <option result="qt">quart</option>
-        <option result="gal">gallon</option>
-        <option result="oz">oz</option>
-        <option result="lb">lb</option>
-        <option result="ml">ml</option>
-        <option result="l">liter</option>
-        <option result="C">Celsius</option>
-        <option result="F">Fahrenheit</option>
-        <option result="g">gram</option>
-        <option result="kg">kilogram</option>
+      
+      <select id="result" onchange="converter(this.value)">
+        <option value="tsp">tsp</option>
+        <option value="tbsp">tbsp</option>
+        <option value="cup">cup</option>
+        <option value="pnt">pint</option>
+        <option value="qt">quart</option>
+        <option value="gal">gallon</option>
+        <option value="oz">oz</option>
+        <option value="lb">lb</option>
+        <option value="g">grams</option>
+        <option value="F">Fahrenheit</option>
+        <option value="C">Celsius</option>
+        <option value="K">Kelvin</option>
       </select>
       
     </p>
-    <p><span id="outputMeters"></span></p>
-    <button onclick="convert()">Convert</button>
+    <p><span id="output"></span></p>
     <%= yield %>
   </div>
 
