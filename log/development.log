@@ -15065,3 +15065,228 @@ Processing by RecipesController#index as HTML
   Rendered recipes/index.html.erb within layouts/application (15.8ms)
   [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
 Completed 200 OK in 160ms (Views: 142.5ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/" for 67.167.59.41 at 2017-07-27 22:43:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.3ms)
+  Rendered recipes/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 692ms (Views: 654.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/pantries.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/recipe_wizard.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/recipes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/application.self-09be34ac8a77508cd897cde73d213838428742e6e34543ce3ffbfbb984caf348.css?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/bootstrap-editable.self-740b04ff8462e42a50301910454d681b02b0c404192855465cb940516df01cce.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/bootstrap-editable-rails.self-63facdb2741874eecb2614fe13298b1a3272fb204b42e1ade657135a64889c41.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/pantries.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/converter.self-f752697506f23fab37be9def89547766c51272c0603e22bd4e4caacc1b6286b6.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/recipe_wizard.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/recipes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/social-share-button.self-402eb947298f6d4b9ce63dafd8a3529bbc6ac19494a76f1b41b45b1f92c92b57.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/assets/application.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for 67.167.59.41 at 2017-07-27 22:43:39 +0000
+
+
+Started GET "/" for 67.167.59.41 at 2017-07-27 22:44:58 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 226ms (Views: 225.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/converter.self-afd8ec1c96c4a7aa00934bedc2e436ce1631a6a5e128b36f09fabe9b8eef695b.js?body=1" for 67.167.59.41 at 2017-07-27 22:44:58 +0000
+
+
+Started GET "/" for 67.167.59.41 at 2017-07-27 22:45:08 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 77ms (Views: 75.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 67.167.59.41 at 2017-07-27 22:45:40 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 166ms (Views: 165.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/converter.self-6f93c5f569245cc09416a38c0dc48ec75002145ec9e78270af5eb66aadda08c3.js?body=1" for 67.167.59.41 at 2017-07-27 22:45:40 +0000
+
+
+Started GET "/" for 67.167.59.41 at 2017-07-27 22:46:57 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/recipes?utf8=%E2%9C%93&search=bacon" for 67.167.59.41 at 2017-07-27 22:47:56 +0000
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"bacon"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE (title LIKE '%bacon%')[0m
+  Rendered recipes/_converter.html.erb (0.0ms)
+  Rendered recipes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 69.47.251.101 at 2017-08-06 18:37:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered recipes/_converter.html.erb (0.3ms)
+  Rendered recipes/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 727ms (Views: 695.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/pantries.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/recipe_wizard.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/recipes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/application.self-09be34ac8a77508cd897cde73d213838428742e6e34543ce3ffbfbb984caf348.css?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/bootstrap-editable.self-740b04ff8462e42a50301910454d681b02b0c404192855465cb940516df01cce.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/bootstrap-editable-rails.self-63facdb2741874eecb2614fe13298b1a3272fb204b42e1ade657135a64889c41.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/converter.self-6f93c5f569245cc09416a38c0dc48ec75002145ec9e78270af5eb66aadda08c3.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/pantries.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/recipe_wizard.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/recipes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/social-share-button.self-402eb947298f6d4b9ce63dafd8a3529bbc6ac19494a76f1b41b45b1f92c92b57.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/assets/application.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for 69.47.251.101 at 2017-08-06 18:37:38 +0000
+
+
+Started GET "/recipes/new" for 69.47.251.101 at 2017-08-06 18:37:41 +0000
+Processing by RecipesController#new as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 69.47.251.101 at 2017-08-06 18:37:41 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 88ms (Views: 78.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in" for 69.47.251.101 at 2017-08-06 18:37:43 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iRM/ASWe0BnrtDr8Wohl7bXRZVkGAOiMuMs63N5wvAK0KhwV8ORez38jDZ8F5hdTozpTmUpsEaPEE/I2/7T63g==", "user"=>{"email"=>"arakawa.ryan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "arakawa.ryan@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-07-21 03:05:26.831749"], ["current_sign_in_at", "2017-08-06 18:37:44.111995"], ["last_sign_in_ip", "69.47.251.101"], ["sign_in_count", 4], ["updated_at", "2017-08-06 18:37:44.113289"], ["id", 1]]
+  [1m[35m (7.8ms)[0m  commit transaction
+Redirected to https://pantry-assistant-waypointna.c9users.io/recipes/new
+Completed 302 Found in 177ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/recipes/new" for 69.47.251.101 at 2017-08-06 18:37:44 +0000
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered recipes/_form.html.erb (11.1ms)
+  Rendered recipes/new.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `tag_list' for #<Recipe:0x0000000439bf80>
+Did you mean?  tag_list_on):
+    27:   
+    28:   <%= form_group_tag(@recipe.errors[:ingredients]) do %>
+    29:     <%= f.label :ingredients %>
+    30:     <%= f.text_area :tag_list, value: f.object.tag_list.to_s, rows: 8, class: 'form-control', placeholder: "Enter ingredients" %>
+    31:   <% end %>
+    32:   
+    33:   <%= form_group_tag(@recipe.errors[:body]) do %>
+  app/views/recipes/_form.html.erb:30:in `block (2 levels) in _app_views_recipes__form_html_erb___3552576678540374239_70337537976300'
+  app/helpers/application_helper.rb:5:in `form_group_tag'
+  app/views/recipes/_form.html.erb:28:in `block in _app_views_recipes__form_html_erb___3552576678540374239_70337537976300'
+  app/views/recipes/_form.html.erb:1:in `_app_views_recipes__form_html_erb___3552576678540374239_70337537976300'
+  app/views/recipes/new.html.erb:5:in `_app_views_recipes_new_html_erb___3926001838274516562_70337537955440'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.5ms)

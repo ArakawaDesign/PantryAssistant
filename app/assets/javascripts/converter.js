@@ -218,5 +218,10 @@ function converter(num, init, result) {
     }
   }
   console.log(finalVal);
+  if (finalVal) {
     document.getElementById("output").innerHTML = finalVal + " " + m2;
+  }
+  else {
+    document.getElementById("output").innerHTML = "Please enter new value."
+  }
 }
